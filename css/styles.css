@@ -7,7 +7,11 @@ body {
 	height: 100%;
 }
 
-header {
+#home-splash {
 	position: relative;
 	min-height: 100%;
+}
+
+header {
+
 }
