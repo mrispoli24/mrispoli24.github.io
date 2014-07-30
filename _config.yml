@@ -2,7 +2,7 @@ safe:        false
 auto:        false
 server:      false
 server_port: 4000
-base-url:    mrispoli24.github.io
+base-url:    /
 
 source:      .
 destination: ./_site
