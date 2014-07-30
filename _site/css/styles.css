@@ -1,0 +1,32 @@
+html, body {
+	height: 100%;
+}
+
+.container-fluid { /* removes default padding from bootstrap container */
+	padding-right: 0;
+	padding-left: 0;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+section { /* adds default padding to inner container */
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+#home-splash {
+	background: url('../images/brainbg.jpg') 50% 50% #000 no-repeat;
+	background-attachment: fixed;
+}
+
+header {
+
+}
+
+.full-height {
+	position: relative;
+	min-height: 100%;
+}
