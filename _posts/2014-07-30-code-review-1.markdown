@@ -1,5 +1,5 @@
 ---
-layout: codereview
+layout: post
 title:  "Weekly Code Review 1"
 date:   2014-07-30 
 ---
