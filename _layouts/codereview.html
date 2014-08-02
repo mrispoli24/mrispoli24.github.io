@@ -7,21 +7,14 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<div id="weekly-review-wrapper" class="container">
-			<div class="row">
-				<header class="col-md-12">
-					<h1>Integration Engineering Weekly Code Review</h1>
-					<hr>
-					<p><strong>Edition 1: 7-28-14</strong></p>
-					<p class="lead">Hey team, welcome to everyone's favorite weekly code review! The idea here is for us to get better as a team by looking over our front-end implementations and spot checking them against our standards. The purpose is for us to never lose sight of the <a href="https://github.com/Olapic/Documentation/blob/master/05-Integrations/02-code-standards.md" target="_blank">standard of excellence</a> we are looking to achieve for all of our clients.</p>
-					<p class="lead">This review will be divided into three sections. The first, <em>updates</em>, will cover any new additions to the code standard each week. Some weeks there will be many other weeks there will be none, but the idea here is for no new info to fall through the cracks, as we may not be checking this all the time. The second div, <em>tips and tricks</em>, will cover any new and convenient features we may have implemented outside of our normal widget functionality. This will allow us all to learn new configurations that clients may desire, yet were only implemented by a single developer. For example the drag and drop uploader is not out of the box functionality, but we should all become aware of it's implementation. The third div, <em>the audit</em>, is the weekly spot check on our code. This is not designed to call anyone out specifically or to put anyone down. The focus here is not on WHO made an error, but to focus on how we can do things with a greater degree of excellence.</p>
-				</header>
+		<div id="wrapper" class="container-fluid">
+		{% include header.html %}
+		<hr>
+		<div class="row">
+			<div class="col-md-12 post">
+				{{ content }}
 			</div>
-			<div class="row">
-				<div class="col-md-12 post">
-					{{ content }}
-				</div>
-			</div>
+		</div>
 		</div>
 	</body>
 </html>
