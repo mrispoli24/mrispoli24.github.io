@@ -1,9 +1,17 @@
----
-layout: default
----
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-{{ content }}
-</div>
+<!doctype html>
+<html>
+	<head>
+		{% include head.html %}
+	</head>
+	<body>
+		<div id="wrapper" class="container-fluid">
+		{% include header.html %}
+		<hr>
+		<div class="row">
+			<div class="col-md-12 post">
+				{{ content }}
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
