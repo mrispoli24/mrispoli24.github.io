@@ -20,7 +20,7 @@ What most clients end up with, is something that works--something that makes bot
 
 ### .The Spectrum Problem
 
-What I have found is that most *mobile optimized* sites today (and I specify *mobile optimized* because some people still forgo mobile all together) exist on a spectrum. Much like in geometery, where a square is a rectangle is also a parralellogram, but not the other way around--responsive is adaptive is mobile optimized but not necessarily vice versa.
+What I have found is that most *mobile optimized* sites today (and I specify *mobile optimized* because some people still forgo mobile all together) exist on a spectrum. Much like in geometery, where a square is a rectangle is also a parralellogram, but not the other way around--responsive sites are adaptive are mobile optimized, but not necessarily vice versa.
 
 At this point, many designers and developers are already rolling their eyes, but give me a chance to help this definition along. In the space of moblile web development, we encounter a schmorgasboard of hybrid solutions. If we try to define the whole of the mobile web in two camps, then we leave out the gray areas that exist, we lose the ability to scope a project effectively, speak intelligently with our clients, and get the full picture to our development team.
 
