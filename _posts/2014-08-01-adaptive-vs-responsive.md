@@ -62,7 +62,7 @@ But then how do we define these terms simply?
 
 ### .The Spectrum Defined
 
-Going back to the geometry example, what I propose are a few major definitions, or buzz words if you will, each nesting within one another like Russian matryoshka dolls. A spectrum highlights the gray areas that we see as sites slowly bring themselves into the mobile era.
+Going back to the geometry example, what I propose are a few major definitions, or buzz words if you will, each nesting within one another like Russian matryoshka dolls. A spectrum highlights the gray areas that we see as sites bring themselves into the mobile era.
 
 
 #### Mobile Optimized
@@ -94,7 +94,7 @@ Again, if you are on a desktop, see <a href="http://jsfiddle.net/mrispoli24/L5tD
 
 ### .For The Visually Inclined
 
-Here is a graphic to showcase the above definitions. If you are an account or project manager and in the business of scoping projects, you may want to consider adding zeros to your price as a client takes you from left to right on the chart.
+Here is a graphic to showcase the above definitions. If you are an account or project manager and in the business of scoping projects, the development time will typically increase as you go from left to right on the spectrum.
 
 <img class="elastic" src="/images/adaptive-responsive-spectrum.jpg" alt="the adaptive responsive spectrum chart">
 
