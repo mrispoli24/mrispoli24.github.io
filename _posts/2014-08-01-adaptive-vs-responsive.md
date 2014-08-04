@@ -6,21 +6,27 @@ date:   2014-08-01
 
 ## Adaptive Vs. Responsive: The Spectrum Problem
 
-These days a common gripe that I have as an developer is the use of the term *responsive* as a buzz word. The question  in meetings is always posed, *"is your site responsive?"* As an integrator of third party software this becomes especially challenging, since a response of *yes* from an ecom director or marketing coordinator can mean just about anything from a completely fluid layout to a completely seperate m.dot template. 
+For my first fully responsive development project I was talked with building the front-end of what would be a large human resources website. Being a novice in the craft at the time, I read everything that I could in order to adopt the best possible solution. I researched CSS frameworks, fluid grids, and popular screen resolutions. Then I came across a strange term, *adaptive design*.
+
+After some research it was clear that there was some discrepancy within the development community as to what exactly was the difference between these two terms. Ultimately I came to the understanding that *adaptive* design meant a site was to be built for a set predetermined screen resolutions or breakpoints. *Responsive* design, on the other hand, meant the site would cover all possible screen resolutions, with seamless breakpoints. 
+
+The problem I found with that particular project was that I was handed three designs, designed at three breakpoints (1152px, 768px, 480px), but the layouts changed so much that it was clear my *responsive* project was in fact designed to be *adaptive*. Ultimately I was left to fill in the middle ground and learned a lot as I struggled to extrapolate the design and make the transition between resolutions appear seamless. 
+
+These days the term *responsive* has become a buzz word. The question in scoping conversations is always posed, *"is your site responsive?"* And a response of *yes* from an ecom director or marketing coordinator can mean just about anything from a completely fluid layout to a completely seperate m.dot template. 
 
 From a designer / developer perspective the correct rhetoric would be is your site *adaptive* or is it *responsive*? However, does this really cover it? Are all sites that are *mobile optimized* sitting within one of these two predefined camps?
 
 The short answer is *no*. 
 
-Back when I was designing and building ecommerce sites for small businesses, in my mind, I had full control. There were two options, fixed width, or a fully eloquent responsive solution. I wanted the site to move like liquid, casually filling it's container perfectly at every browser resize. Then I learned about timelines, cost constraints, and client interference.
+After the frustration of that first project, in my mind, there were two options, a fixed width layout, or a fully responsive solution. Adaptive just felt like a dirty word to me. I wanted the site to move like liquid, casually filling it's container perfectly at every browser resize. Then I learned about timelines, cost constraints, and client interference.
 
-The fact is, you don't always get the option of a full redesign, and you don't always get the option of executing your vision completely. Sometimes the client's in-house designer, is bound to the old print media model, understanding little of the careful balance holding a site together across every resolution. A fully responsive site usually requires a full redesign of the previous site, and last minute changes can leave you tearing your hair out in frustration as your beutiful liquid mercury terminator get's shredded to bits. 
+The fact is, you don't always get the option of a full redesign, and you don't always get the option of executing *your* vision completely. A fully responsive site usually requires a full redesign of the previous site, and last minute changes can leave you tearing your hair out in frustration as your beutiful liquid mercury terminator get's shredded to bits. 
 
-What most clients end up with, is something that works--something that makes both money and it's launch date.
+What many clients end up with, is something in the middle--something that makes both money and it's launch date.
 
 ### .The Spectrum Problem
 
-What I have found is that most *mobile optimized* sites today (and I specify *mobile optimized* because some people still forgo mobile all together) exist on a spectrum. Much like in geometery, where a square is a rectangle is also a parralellogram, but not the other way around--responsive sites are adaptive are mobile optimized, but not necessarily vice versa.
+What I have found is that most *mobile optimized* sites today (and I specify *mobile optimized* because some people still forgo mobile all together) exist on a spectrum. Much like in geometry, where a square is a rectangle is also a parralellogram, but not the other way around--responsive sites are adaptive are mobile optimized, but not necessarily vice versa.
 
 At this point, many designers and developers are already rolling their eyes, but give me a chance to help this definition along. In the space of moblile web development, we encounter a schmorgasboard of hybrid solutions. If we try to define the whole of the mobile web in two camps, then we leave out the gray areas that exist, we lose the ability to scope a project effectively, speak intelligently with our clients, and get the full picture to our development team.
 
