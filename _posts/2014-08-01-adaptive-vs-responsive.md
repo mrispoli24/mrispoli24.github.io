@@ -85,7 +85,7 @@ If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/
 
 Responsive design means that the site will *respond* to any device constraints thrown at it. It involves the use of percentages for element and font size, fluid grids, and will scale the layout according to window-width *not* device-width. This is the latest craze in web design as it is the most forward thinking by ensuring consistent layout despite the myriad of new devices and screen sizes released each year.
 
-The criticism here is that the site is not served up only what is required for that device--potentially resulting in a loss of performance. The advantage being, one template can fit any device or window size possible, without a loss of user experience.
+The criticism here is that the site is not serving up only what is required for that device--potentially resulting in a loss of performance. The advantage being, one template can fit any device or window size possible, without a loss of user experience.
 
 Does this mean that a responsive site is not also adaptive? No, it most certainly is adaptive, it's just more graceful than other adaptive methods. But is an adaptive site also responsive? Not necessarily.  
 
