@@ -72,14 +72,20 @@ This encompasses any site with even the most primitive of mobile capabilities--a
 
 #### Adaptive
 
-Adaptive design takes the approach of setting the template to shift at predetermined widths or *breakpoints*. Traditionally this could either be done by serving up a new templates based upon device detection, or through media queries utilizing the same template. However, today, we see this definition applied mainly to the media query method as serving up a separate templates is losing favor. When done by media query, adaptive sites can either specify device-width or window-width, but the site will appear to *snap* at the specified breakpoints to the next layout. One can see that in the adaptive definition alone there is a spectrum, but it's beginning to narrow.
+Adaptive design takes the approach of setting the template to shift at predetermined widths or *breakpoints*. Traditionally this could either be done by serving up a new templates based upon device detection, or through media queries utilizing the same template.
+
+The advantage of serving seperate (m.dot) templates is that each device is served only the content optimized for that device with nothing extra loaded. That being said, the media query method is gaining favor, having faster development times and being closer to *responsive* on the spectrum than the m.dot method.
+
+When done by media query, adaptive sites can either specify device-width or window-width, but the site will appear to *snap* at the specified breakpoints to the next layout. One can see that in the adaptive definition alone there is a spectrum, but it's beginning to narrow.
 
 If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/E2xsr/6/embedded/result/" target="_blank">this example</a>. I've made the break points a bit more drastic to emphasize the effect but be sure to take a look at how the Site content *snaps* to the next width. I used the window-size detection method so you can simply resize your browser window rather than load in a device.
 
 
 #### Responsive
 
-Responsive design means that the site will *respond* to any device constraints thrown at it. It involves the use of percentages for element and font size, fluid grids, and will scale the layout according to window-width *not* device-width. This is the latest craze in web design as it is the most forward thinking by ensuring consistent layout despite the myriad of new devices and screen sizes released each year. Does this mean that a responsive site is not also adaptive? No, it most certainly is adaptive, it's just more graceful than other adaptive methods. But is an adaptive site also responsive? Not necessarily.  
+Responsive design means that the site will *respond* to any device constraints thrown at it. It involves the use of percentages for element and font size, fluid grids, and will scale the layout according to window-width *not* device-width. This is the latest craze in web design as it is the most forward thinking by ensuring consistent layout despite the myriad of new devices and screen sizes released each year.
+
+Does this mean that a responsive site is not also adaptive? No, it most certainly is adaptive, it's just more graceful than other adaptive methods. But is an adaptive site also responsive? Not necessarily.  
 
 If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/9L9wk/8/embedded/result/" target="_blank">this example</a>. When you resize the window, you  can see that rather than snapping to specific points, a *fluid grid* scales on it's own, reconfiguring the layout when necessary at smaller resolutions.
 
