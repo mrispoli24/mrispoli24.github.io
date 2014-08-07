@@ -74,7 +74,7 @@ This encompasses any site with even the most primitive of mobile capabilities--a
 
 Adaptive design takes the approach of setting the template to shift at predetermined widths or *breakpoints*. Traditionally this could either be done by serving up a new templates based upon device detection, or through media queries utilizing the same template.
 
-The advantage of serving seperate (m.dot) templates is that each device is served only the content optimized for that device with nothing extra loaded. That being said, the media query method is gaining favor, having faster development times and being closer to *responsive* on the spectrum than the m.dot method.
+The advantage of serving seperate mobile templates is that each device is served only the content optimized for that device with nothing extra loaded. Images, styles, and HTML are only that which is required--this is not the case when we move over to responsive. That being said, the media query method is gaining favor--with faster development times and being closer to *responsive* on the spectrum of mobile design.
 
 When done by media query, adaptive sites can either specify device-width or window-width, but the site will appear to *snap* at the specified breakpoints to the next layout. One can see that in the adaptive definition alone there is a spectrum, but it's beginning to narrow.
 
@@ -84,6 +84,8 @@ If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/
 #### Responsive
 
 Responsive design means that the site will *respond* to any device constraints thrown at it. It involves the use of percentages for element and font size, fluid grids, and will scale the layout according to window-width *not* device-width. This is the latest craze in web design as it is the most forward thinking by ensuring consistent layout despite the myriad of new devices and screen sizes released each year.
+
+The criticism here is that the site is not served up only what is required for that device, but rather all devices are served the same content--it simply responds to it's environment. The advantage being, one template can fit any device or window size possible, without a loss of user experience.
 
 Does this mean that a responsive site is not also adaptive? No, it most certainly is adaptive, it's just more graceful than other adaptive methods. But is an adaptive site also responsive? Not necessarily.  
 
