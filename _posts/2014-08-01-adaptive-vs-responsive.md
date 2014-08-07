@@ -74,7 +74,7 @@ This encompasses any site with even the most primitive of mobile capabilities--a
 
 Adaptive design takes the approach of setting the template to shift at predetermined widths or *breakpoints*. Traditionally this could either be done by serving up a new templates based upon device detection, or through media queries utilizing the same template.
 
-The advantage of serving seperate mobile templates is that each device is served only the content optimized for that device with nothing extra loaded. Images, styles, and HTML are only that which is required--this is not the case when we move over to responsive. That being said, the media query method is gaining favor--with faster development times and being closer to *responsive* on the spectrum of mobile design.
+The advantage of serving separate mobile templates is that each device is served only the content optimized for that device with nothing extra loaded. Images, styles, and HTML are only that which is required--this is not the case when we move over to responsive. That being said, the media query method is gaining favor--with faster development times and being closer to *responsive* on the spectrum of mobile design.
 
 When done by media query, adaptive sites can either specify device-width or window-width, but the site will appear to *snap* at the specified breakpoints to the next layout. One can see that in the adaptive definition alone there is a spectrum, but it's beginning to narrow.
 
