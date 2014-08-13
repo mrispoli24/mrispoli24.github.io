@@ -25,3 +25,17 @@ CSS can be looked at as your passive pro. As the presentation layer it adds life
 JavaScript, your active pro, is the most versatile and also can manipulate the DOM in ways CSS and HTML cannot. At the same time it can also do everything the previous two languages can and more.
 
 ### Why Do Semantics Even Matter?
+
+As a standards nut and perfectionist, I often find myself in debate about why exactly semantics are important with other developers. The standard response is always, *"well it works, that's what's important, who cares what is under the hood? The client can't see it."*
+
+Taking pride in one's work is all about the unseen, what goes on when no one is looking. How would you like it if the person insulating your house did it in a sub par fashion, knowing no one would look beneath the sheet rock for a decade or more. It's about taking ownership of your craft, and doing it in the most efficient and eloquent method possible--because you want to be an example to follow.
+
+Semantics ensures accessibility, which is at the core of the internet. Hyper Text Markup Language was originally created as a means for researchers to share information with one another. The tags themselves are designed to outline information, they were created to mean something. The internet's beauty is in it's ability to transfer information, HTML outlines that information and gives it meaning to both the computer and the user. It's easy to get caught up in the internet as a means for entertainment, sales, or marketing--but we cannot forget that it's revolutionary beauty is in the ability to share information in a universal format. Semantics ensures this primary mission lives on, even as the web becomes more cluttered with the obstuse.
+
+Efficiency and extensibility are promoted by semantics. By separating structure, presentation, and behavior we use code in the most efficient way possible and also make it easier to make changes and upgrade that code well into the future. Again we keep the information in tact first and foremost, the rest is just noise.
+
+Google loves semantics. Despite the theory that SEO is going the way of the Dodo Bird, it is still alive and well, and Google's crawlers respond well to good clean markup. Why make your clients work harder to climb those search engine ranks if they are fighting an uphill battle against bad markup.
+
+If you have ever torn your hair out fixing cross browser bugs in a website you will understand the need for code to be written one way and read one way. It's difficult to build a universal tool when different browsers use and render it differently. Semantics and web standards move to standardize the code we write to appear one way all the time. This has begun to put an end to the wild west days where IE rendered code one way and Safari did it another. In order to expect companies to render all code without cross browser hacks, we have to start agreeing on one way to write it in the first place.
+
+### How Do I Start Writing Semantic Markup?
