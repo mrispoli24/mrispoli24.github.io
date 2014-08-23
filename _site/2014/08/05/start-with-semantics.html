@@ -45,6 +45,50 @@
 
 <h3>Why Do Semantics Even Matter?</h3>
 
+<p>As a standards nut and perfectionist, I often find myself in debate about why exactly semantics are important with other developers. The standard response is always, <em>&quot;Well it works. That&#39;s what&#39;s important. Who cares what is under the hood? The client can&#39;t see it.&quot;</em></p>
+
+<p>Taking pride in one&#39;s work is all about the unseen, what goes on when no one is looking. How would you like it if the person insulating your house did it in a sub par fashion, knowing no one would look beneath the sheet rock for a decade or more. It&#39;s about taking ownership of your craft, and doing it in the most efficient and eloquent method possible--because you want to be an example to follow.</p>
+
+<p>Semantics ensures accessibility, which is at the core of the internet. Hyper Text Markup Language was originally created as a means for researchers to share information with one another. The tags themselves are designed to outline information, they were created to mean something. The internet&#39;s beauty is in it&#39;s ability to transfer information, HTML outlines that information and gives it meaning to both the computer and the user. It&#39;s easy to get caught up in the internet as a means for entertainment, sales, or marketing--but we cannot forget that it&#39;s revolutionary beauty is in the ability to share information in a universal format. Semantics ensures this primary mission lives on, even as the web becomes more cluttered with the obtuse.</p>
+
+<p>Efficiency and extensibility are promoted by semantics. By separating structure, presentation, and behavior we use code in the most efficient way possible and also make it easier to make changes and upgrade that code well into the future. Again we keep the information in tact first and foremost, the rest is just noise.</p>
+
+<p>Google loves semantics. Despite the theory that SEO is going the way of the Dodo Bird, it is still alive and well, and Google&#39;s crawlers respond well to good clean markup. Why make your clients work harder to climb those search engine ranks if they are fighting an uphill battle against bad markup.</p>
+
+<p>If you have ever torn your hair out fixing cross browser bugs in a website you will understand the need for code to be written one way and read one way. It&#39;s difficult to build a universal tool when different browsers use and render it differently. Semantics and web standards move to standardize the code we write to appear one way all the time. This has begun to put an end to the wild west days where IE rendered code one way and Safari did it another. In order to expect companies to render all code without cross browser hacks, we have to start agreeing on one way to write it in the first place.</p>
+
+<h3>How Do I Start Writing Semantic Markup?</h3>
+
+<p>It is important to note that this is an evolutionary process. Each time we build a site or refactor our applications we should strive to do this better, but there are no perfect solutions. My goal here is not to create evangelists or hipster code snobs, but to get us thinking in the proper manner.</p>
+
+<h4>Start With Structure</h4>
+
+<p>When we begin our build we should start with the HTML first. Get all of the information on the table. If this is a web page I should be able to access all of the important information, imagery, and navigate the links without any styling or scripting applied.</p>
+
+<p>I should note there will be some exceptions for instance use of background images for responsive design and dynamic single page application with tools like node.js and angular.js. However, for the purposes of this post we just want to focus on the basics, building good habits early means you will be better suited to break the rules later.</p>
+
+<p><em>&quot;I&#39;m not a great programmer; I&#39;m just a good programmer with great habits&quot; - Kent Beck</em></p>
+
+<p>As we build out our HTML we want to make sure that when we make a heading that it is in fact a heading. Remember we are not using tags to style text and make it larger, we are just building an outline. There should be a single <code>&lt;h1&gt;</code> on the page and that will represent your title in most cases. The next level down will be our <code>&lt;h2&gt;</code> subheadings and beyond that we have our <code>&lt;h3</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code>. In most cases you will not use all of these, and remember to make text bold or italic we want to use our <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> <em>not</em> our heading tags.</p>
+
+<p>Remember outlines from middle school? That is the effect our markup will take on.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h1&gt;</span>This is the title of my page, there will be only one per page<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Here I have some introductory text. Remember I am a paragraph not a tagline or byline.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>This is a subheading for the next section of my post.<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;h3&gt;</span>Here is another subheading<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;h3&gt;</span>...and another<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+          <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>...<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+
 			</div>
 		</div>
 		</div>

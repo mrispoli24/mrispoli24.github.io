@@ -26,11 +26,11 @@ JavaScript, your active pro, is the most versatile and also can manipulate the D
 
 ### Why Do Semantics Even Matter?
 
-As a standards nut and perfectionist, I often find myself in debate about why exactly semantics are important with other developers. The standard response is always, *"well it works, that's what's important, who cares what is under the hood? The client can't see it."*
+As a standards nut and perfectionist, I often find myself in debate about why exactly semantics are important with other developers. The standard response is always, *"Well it works. That's what's important. Who cares what is under the hood? The client can't see it."*
 
 Taking pride in one's work is all about the unseen, what goes on when no one is looking. How would you like it if the person insulating your house did it in a sub par fashion, knowing no one would look beneath the sheet rock for a decade or more. It's about taking ownership of your craft, and doing it in the most efficient and eloquent method possible--because you want to be an example to follow.
 
-Semantics ensures accessibility, which is at the core of the internet. Hyper Text Markup Language was originally created as a means for researchers to share information with one another. The tags themselves are designed to outline information, they were created to mean something. The internet's beauty is in it's ability to transfer information, HTML outlines that information and gives it meaning to both the computer and the user. It's easy to get caught up in the internet as a means for entertainment, sales, or marketing--but we cannot forget that it's revolutionary beauty is in the ability to share information in a universal format. Semantics ensures this primary mission lives on, even as the web becomes more cluttered with the obstuse.
+Semantics ensures accessibility, which is at the core of the internet. Hyper Text Markup Language was originally created as a means for researchers to share information with one another. The tags themselves are designed to outline information, they were created to mean something. The internet's beauty is in it's ability to transfer information, HTML outlines that information and gives it meaning to both the computer and the user. It's easy to get caught up in the internet as a means for entertainment, sales, or marketing--but we cannot forget that it's revolutionary beauty is in the ability to share information in a universal format. Semantics ensures this primary mission lives on, even as the web becomes more cluttered with the obtuse.
 
 Efficiency and extensibility are promoted by semantics. By separating structure, presentation, and behavior we use code in the most efficient way possible and also make it easier to make changes and upgrade that code well into the future. Again we keep the information in tact first and foremost, the rest is just noise.
 
@@ -39,3 +39,42 @@ Google loves semantics. Despite the theory that SEO is going the way of the Dodo
 If you have ever torn your hair out fixing cross browser bugs in a website you will understand the need for code to be written one way and read one way. It's difficult to build a universal tool when different browsers use and render it differently. Semantics and web standards move to standardize the code we write to appear one way all the time. This has begun to put an end to the wild west days where IE rendered code one way and Safari did it another. In order to expect companies to render all code without cross browser hacks, we have to start agreeing on one way to write it in the first place.
 
 ### How Do I Start Writing Semantic Markup?
+
+It is important to note that this is an evolutionary process. Each time we build a site or refactor our applications we should strive to do this better, but there are no perfect solutions. My goal here is not to create evangelists or hipster code snobs, but to get us thinking in the proper manner.
+
+#### Start With Structure
+
+When we begin our build we should start with the HTML first. Get all of the information on the table. If this is a web page I should be able to access all of the important information, imagery, and navigate the links without any styling or scripting applied.
+
+I should note there will be some exceptions for instance use of background images for responsive design and dynamic single page application with tools like node.js and angular.js. However, for the purposes of this post we just want to focus on the basics, building good habits early means you will be better suited to break the rules later.
+
+*"I'm not a great programmer; I'm just a good programmer with great habits" - Kent Beck*
+
+As we build out our HTML we want to make sure that when we make a heading that it is in fact a heading. Remember we are not using tags to style text and make it larger, we are just building an outline. There should be a single `<h1>` on the page and that will represent your title in most cases. The next level down will be our `<h2>` subheadings and beyond that we have our `<h3`, `<h4>`, `<h5>`, `<h6>`. In most cases you will not use all of these, and remember to make text bold or italic we want to use our `<strong>` and `<em>` *not* our heading tags.
+
+Remember outlines from middle school? That is the effect our markup will take on.
+
+{% highlight html %}
+<h1>This is the title of my page, there will be only one per page</h1>
+  <p>Here is some introductory text. Remember I am a paragraph not a tagline or byline.</p>
+  <h2>This is a subheading for the next section of my post.</h2>
+  <p>...</p>
+      <h3>Here is another subheading</h3>
+        <p>...</p>
+      <h3>...and another</h3>
+        <ul>
+          <li>...</li>
+          <li>...</li>
+          <li>...</li>
+        </ul>
+    <h2>...</h2>
+    <p>...</p>
+{% endhighlight %}
+
+**But what about non-semantic text? Bylines, tag-lines, and standalone lines?**
+
+For text with no apparent semantic significance we have a tag for that, it's called a `<span>` tag. Often we use it to style single words within a paragraph but in a semantic sense they really can be seen as a utility tag to be used inside of paragraphs of course but also on their own for single lines of text.
+
+#### Next The Style
+
+*Style is the difference, a way of doing, a way of being done. -Charles Bukowski*

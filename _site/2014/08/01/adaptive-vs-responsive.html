@@ -86,13 +86,21 @@
 
 <h4>Adaptive</h4>
 
-<p>Adaptive design takes the approach of setting the template to shift at predetermined widths or <em>breakpoints</em>. Traditionally this could either be done by serving up a new templates based upon device detection, or through media queries utilizing the same template. However, today, we see this definition applied mainly to the media query method as serving up a separate templates is losing favor. When done by media query, adaptive sites can either specify device-width or window-width, but the site will appear to <em>snap</em> at the specified breakpoints to the next layout. One can see that in the adaptive definition alone there is a spectrum, but it&#39;s beginning to narrow.</p>
+<p>Adaptive design takes the approach of setting the template to shift at predetermined widths or <em>breakpoints</em>. Traditionally this could either be done by serving up a new templates based upon device detection, or through media queries utilizing the same template.</p>
+
+<p>The advantage of serving separate mobile templates is that each device is served only the content optimized for that device with nothing extra loaded. Images, styles, and HTML are only that which is required--this is not the case when we move over to responsive. That being said, the media query method is gaining favor--with faster development times and being closer to <em>responsive</em> on the spectrum of mobile design.</p>
+
+<p>When done by media query, adaptive sites can either specify device-width or window-width, but the site will appear to <em>snap</em> at the specified breakpoints to the next layout. One can see that in the adaptive definition alone there is a spectrum, but it&#39;s beginning to narrow.</p>
 
 <p>If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/E2xsr/6/embedded/result/" target="_blank">this example</a>. I&#39;ve made the break points a bit more drastic to emphasize the effect but be sure to take a look at how the Site content <em>snaps</em> to the next width. I used the window-size detection method so you can simply resize your browser window rather than load in a device.</p>
 
 <h4>Responsive</h4>
 
-<p>Responsive design means that the site will <em>respond</em> to any device constraints thrown at it. It involves the use of percentages for element and font size, fluid grids, and will scale the layout according to window-width <em>not</em> device-width. This is the latest craze in web design as it is the most forward thinking by ensuring consistent layout despite the myriad of new devices and screen sizes released each year. Does this mean that a responsive site is not also adaptive? No, it most certainly is adaptive, it&#39;s just more graceful than other adaptive methods. But is an adaptive site also responsive? Not necessarily.  </p>
+<p>Responsive design means that the site will <em>respond</em> to any device constraints thrown at it. It involves the use of percentages for element and font size, fluid grids, and will scale the layout according to window-width <em>not</em> device-width. This is the latest craze in web design as it is the most forward thinking by ensuring consistent layout despite the myriad of new devices and screen sizes released each year.</p>
+
+<p>The criticism here is that the site is not serving up only what is required for that device--potentially resulting in a loss of performance. The advantage being, one template can fit any device or window size possible, without a loss of user experience.</p>
+
+<p>Does this mean that a responsive site is not also adaptive? No, it most certainly is adaptive, it&#39;s just more graceful than other adaptive methods. But is an adaptive site also responsive? Not necessarily.  </p>
 
 <p>If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/9L9wk/8/embedded/result/" target="_blank">this example</a>. When you resize the window, you  can see that rather than snapping to specific points, a <em>fluid grid</em> scales on it&#39;s own, reconfiguring the layout when necessary at smaller resolutions.</p>
 
