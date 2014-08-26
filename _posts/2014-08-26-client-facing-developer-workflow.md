@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Client Facing Developer: A Workflow of Distractions"
-date:   2014-08-01
+date:   2014-08-26
 ---
 
 # Client Facing Developer: A Workflow of Distractions
@@ -72,6 +72,7 @@ Never use a phone! When getting on a scheduled call with a client use go to meet
 
 Sometimes the phone is unavoidable, especially if the client dials in off the bat. Try to communicate this in your emails if necessary, *"hey I'm going to set us up with a screen share for 1pm EST".* Notice I also specified time zone, with increasing globalization this simple detail can turn an important meeting into an opportunity to be a no-show.
 
+<!----------------------------->
 
 That's it! My top five tips for client-services success. Whether you are a freelancer or full time client facing developer being a *people person* can be a great asset to any organization. Making sure you have the proper workflow will maintain your engineering proficiency as well as your customer satisfaction.
 
