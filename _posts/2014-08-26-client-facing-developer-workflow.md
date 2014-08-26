@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Adaptive Vs. Responsive"
+title:  "Client Facing Developer: A Workflow of Distractions"
 date:   2014-08-01
 ---
 
-# Client Facing Developers: A Workflow Filled With Distractions
+# Client Facing Developer: A Workflow of Distractions
 
 *"Look--I'm a people person, dammit." -Office Space*
 
