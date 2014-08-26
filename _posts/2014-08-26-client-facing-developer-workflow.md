@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Adaptive Vs. Responsive"
+date:   2014-08-01
+---
+
 # Client Facing Developers: A Workflow Filled With Distractions
 
 *"Look--I'm a people person, dammit." -Office Space*
