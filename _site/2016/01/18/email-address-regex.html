@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Regex to Validate Email Addresses</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/syntax.css">
+<script src="/js/behave.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+		<div id="post-wrapper" class="container-fluid">
+		<header class="row">
+	<div id="header-details" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h1>Michael Rispoli Development</h1>
+		<span>/* creative frontend development | color the ordinary */</span>
+	</div>
+</header>
+
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="post">
+				<h1 id="adding-email-address-regex-to-form">Adding email address regex to form</h1>
+
+<p>The following uses a regex to check for a valid email address before attempting to submit a form.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">&lt;script type=&quot;text/javascript&quot;&gt;
+jQuery(function(){
+function formErrorHandler(value, e){
+ try {
+     var is_email = /^(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     if (!is_email.test(value)){
+       e.preventDefault();
+       alert(&quot;Please enter a valid email&quot;);
+    }
+ }catch(error){}
+};
+jQuery(&#39;.mailchimp_signup_form&#39;).submit(function(e){
+try {
+ var email = jQuery(this).find(&#39;input[name=&quot;email&quot;]&#39;).val();
+ formErrorHandler(email, e);
+} catch(error){};
+});
+});
+&lt;/script&gt;
+</code></pre></figure>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

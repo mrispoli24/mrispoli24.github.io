@@ -14,7 +14,7 @@ The problem I found with that particular project was that I was handed three des
 
 After battling the frustration of that first project, I had come to the conclusion there were two options, a fixed width layout, or a fully responsive solution. Adaptive just felt like a dirty word to me. I wanted the site to move like liquid, casually filling it's container perfectly at every browser resize. Then I learned about timelines, cost constraints, and client interference.
 
-A fully responsive site usually requires a full redesign of the previous site, and last minute changes can leave you tearing your hair out in frustration as your beutiful liquid mercury terminator get's shredded to bits. You don't always get the option of a full redesign, and you don't always get the option of executing *your* vision completely.
+A fully responsive site usually requires a full redesign of the previous site, and last minute changes can leave you tearing your hair out in frustration as your beautiful liquid mercury terminator get's shredded to bits. You don't always get the option of a full redesign, and you don't always get the option of executing *your* vision completely.
 
 What many clients want, is something in the middle--something that makes both money and it's launch date.
 

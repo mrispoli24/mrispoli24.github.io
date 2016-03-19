@@ -1,18 +1,29 @@
 html, body {
-	background: url('/images/cartographer.png') 0 0 repeat;
+	/*background: url('/images/cartographer.png') 0 0 repeat;*/
 	height: 100%;
 }
 
 #wrapper {
-	width: 85%;
-	max-width: 768px;
+	position: relative;
+	width: 100%;
 	margin: 0 auto;
 	background: #fff;
-	min-height: 100%;
+}
+
+#post-wrapper {
+	background: url('/images/cartographer.png') 0 0 repeat;
+}
+
+#post-wrapper .post {
+	background: #fff;
+	width: 100%;
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 80px 40px;
 }
 
 h1,
-h2, 
+h2,
 h3,
 h4,
 h5,
@@ -25,4 +36,185 @@ header span,
 .elastic {
 	width: 100%;
 	height: auto;
+}
+
+.post thead td {
+	text-align: center;
+}
+
+.post tbody tr:nth-child(2n) {
+	background-color: #f8f8f8;
+}
+
+.post table td,
+.post table th {
+	padding: 6px 13px;
+	border: 1px solid #ddd;
+}
+
+#wrapper header {
+	height: 100vh;
+}
+
+#header-details {
+	position: fixed;
+	height: 95px;
+	z-index: 999;
+	background: rgba(0,0,0,1);
+}
+
+#header-details h1,
+#header-details span {
+	display:block;
+	color: #fff;
+	text-align: center;
+}
+
+#wrapper #header-details {
+
+}
+
+/* hero slideshow */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes colorize {
+    from   {opacity: 1;}
+    to {opacity: 0;}
+}
+
+/* Standard syntax */
+@keyframes colorize {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+#bg-slider {
+	position: fixed;
+	top: 45px;
+	width: 100%;
+}
+
+.slide {
+	width: 100%;
+	height: 100vh;
+	min-height: 600px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 500ms linear;
+	-moz-transition: all 500ms linear;
+	-ms-transition: all 500ms linear;
+	transition: all 500ms linear;
+}
+
+.slide.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.slide .bw-frame,
+.slide .color-frame {
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+}
+
+.bw-frame,
+.color-frame {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.slide.animate .bw-frame {
+	-webkit-animation: colorize 5s 1s forwards; /* Chrome, Safari, Opera */
+	animation: colorize 5s 1s forwards;
+}
+
+#slide_one .bw-frame {
+	background-image: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_bw.jpg');
+}
+
+#slide_one .color-frame {
+	background-image: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_color.jpg');
+}
+
+#slide_two .bw-frame {
+	background-image: url('/images/hero_slideshow/cantegena_windows_2_bw.jpg');
+}
+
+#slide_two .color-frame {
+	background-image: url('/images/hero_slideshow/cartegena_windows_2_color.jpg');
+}
+
+#slide_three .bw-frame {
+	background-image: url('/images/hero_slideshow/flower_1_bw.jpg');
+}
+
+#slide_three .color-frame {
+	background-image: url('/images/hero_slideshow/flower_1_color.jpg');
+}
+
+#slide_four .bw-frame {
+	background-image: url('/images/hero_slideshow/cartegena_windows_1_bw.jpg');
+}
+
+#slide_four .color-frame {
+	background-image: url('/images/hero_slideshow/cartegena_color_bw_series_1_color.jpg');
+}
+
+nav {
+	width: 100%;
+	height: 45px;
+	background: rgba(255,255,255,1);
+	z-index: 999;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 10px 20px;
+}
+
+nav ul li a {
+	color: #000;
+}
+
+.section {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding-top: 145px;
+}
+
+.section-content {
+	width: 100%;
+	max-width: 970px;
+	margin: 0 auto;
+
+}
+
+#about-me {
+	background: #000;
+	color: #fff;
+}
+
+.is-sticky.sticky {
+	position: fixed;
+	top: 95px;
+}
+
+#archive {
+	background: #fff;
+	color: #000;
 }

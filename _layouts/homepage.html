@@ -8,8 +8,30 @@
 		{% include header.html %}
 		<hr>
 		<div class="row contents">
-			<div class="col-md-12">
-				{{ content }}
+			<div id="sticky-anchor"></div>
+			<nav class="is-sticky col-md-12">
+				<ul>
+					<li><a href="#about-me">about me</a></li>
+					<li><a href="#archive">field notes</a></li>
+				</ul>
+			</nav>
+			<div id="about-me" class="section col-md-12">
+				<div class="section-content">
+					<h2>About Me</h2>
+					<p>I am a frontend designer and engineer specializing in creative website and user interface solutions. I have a wide array of experience from working with digital agencies to working with emerging SaaS marketing solutions. That's the boring stuff. The stuff you rehearse in the mirror before interviews and sales meetings. But what am I about? What's my personal brand?</p>
+					<p>My journey into the world of design began in photography, in the dark room of my high school where I learned the beauty of unique composition and the simplicity of seeing the world in black and white. I continued the craft through college, but opted to change my major to geography. After some time on the road and a foray into the corporate world of business management I fell into the unique opportunity to design and develop frontend web experiences. At last a place where I could blend the artisitic and the technical.</p>
+					<p>My expertise and passion lives in the frontend, where I can blend the line that separates the machine from the sublime. From time to time I still break out the camera as you will see my work adorning this site running on top of a web experience that is uniquely me.</p>
+				</div>
+			</div>
+			<div id="archive" class="section col-md-12">
+				<div class="section-content">
+					<h2>.field-notes</h2>
+					<ul class="posts">
+					  {% for post in site.posts %}
+					    <li><span>{{ post.date | date_to_string }}</span> &#123; <a href="{{ post.url }}">{{ post.title }}</a> &#125;</li>
+					  {% endfor %}
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
