@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Some Simple Useful Cookie Functions (vanilla js)</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/syntax.css">
+<script src="/js/behave.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+		<div id="post-wrapper" class="container-fluid">
+		<header class="row">
+	<div id="header-details" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h1>Michael Rispoli Development</h1>
+		<span>/* creative frontend development | color the ordinary */</span>
+	</div>
+</header>
+
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="post">
+				<h1 id="simple-cookie-functions">Simple Cookie functions</h1>
+
+<p>The following are simple js functions for setting, getting and checking cookies.</p>
+
+<h2 id="set-cookie">Set Cookie</h2>
+
+<p>Sets a cookie.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">function setCookie(cname, cvalue, exdays) {
+  try {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = &quot;expires=&quot;+d.toUTCString();
+    document.cookie = cname + &quot;=&quot; + cvalue + &quot;; &quot; + expires;
+  } catch(error){}
+}
+</code></pre></figure>
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>cname</code></td>
+<td>The name of the cookie</td>
+</tr>
+<tr>
+<td><code>cvalue</code></td>
+<td>The value of the cookie</td>
+</tr>
+<tr>
+<td><code>exdays</code></td>
+<td>How long until the cookie expires in days</td>
+</tr>
+</tbody></table>
+
+<h2 id="check-cookie">Check Cookie</h2>
+
+<p>Checks the existence of a cookie with a simple boolean return.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">function checkCookie(cname) {
+  try {
+    var check=getCookie(cname);
+    if (check != &quot;&quot;) {
+      return true;
+    }else{
+      return false;
+    }
+  } catch(error){}
+}
+</code></pre></figure>
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>cname</code></td>
+<td>The name of the cookie to check</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-cookie">Get Cookie</h2>
+
+<p>Retrieves a cookie.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">function getCookie(cname) {
+  try {
+    var name = cname + &quot;=&quot;;
+    var ca = document.cookie.split(&#39;;&#39;);
+    for(var i=0; i&lt;ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==&#39; &#39;) c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return &quot;&quot;;
+} catch(error){}
+</code></pre></figure>
+<table><thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>cname</code></td>
+<td>The name of the cookie to retrieve</td>
+</tr>
+</tbody></table>
+
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
