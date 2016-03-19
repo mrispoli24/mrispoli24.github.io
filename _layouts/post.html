@@ -4,12 +4,14 @@
 		{% include head.html %}
 	</head>
 	<body>
-		<div id="wrapper" class="container-fluid">
-		{% include header.html %}
+		<div id="post-wrapper" class="container-fluid">
+		{% include header_post.html %}
 		<hr>
 		<div class="row">
-			<div class="col-md-12 post">
+			<div class="col-md-12">
+				<div class="post">
 				{{ content }}
+				</div>
 			</div>
 		</div>
 		</div>

@@ -4,13 +4,22 @@ html, body {
 }
 
 #wrapper {
+	position: relative;
 	width: 100%;
 	margin: 0 auto;
 	background: #fff;
 }
 
-#wrapper .post {
+#post-wrapper {
+	background: url('/images/cartographer.png') 0 0 repeat;
+}
 
+#post-wrapper .post {
+	background: #fff;
+	width: 100%;
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 80px 40px;
 }
 
 h1,
@@ -43,7 +52,7 @@ header span,
 	border: 1px solid #ddd;
 }
 
-header {
+#wrapper header {
 	height: 100vh;
 }
 
@@ -59,6 +68,10 @@ header {
 	display:block;
 	color: #fff;
 	text-align: center;
+}
+
+#wrapper #header-details {
+
 }
 
 /* hero slideshow */
@@ -105,10 +118,12 @@ header {
 .slide .color-frame {
 	width: 100%;
 	height: 100%;
-	-webkit-background-size: cover !important;
-	-moz-background-size: cover !important;
-	-ms-background-size: cover !important;
-	background-size: cover !important;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
 }
 
 .bw-frame,
@@ -124,41 +139,82 @@ header {
 }
 
 #slide_one .bw-frame {
-	background: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_bw.jpg') 50% 50% no-repeat;
+	background-image: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_bw.jpg');
 }
 
 #slide_one .color-frame {
-	background: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_color.jpg') 50% 50% no-repeat;
+	background-image: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_color.jpg');
 }
 
 #slide_two .bw-frame {
-	background: url('/images/hero_slideshow/cantegena_windows_2_bw.jpg') 50% 50% no-repeat;
+	background-image: url('/images/hero_slideshow/cantegena_windows_2_bw.jpg');
 }
 
 #slide_two .color-frame {
-	background: url('/images/hero_slideshow/cartegena_windows_2_color.jpg') 50% 50% no-repeat;
+	background-image: url('/images/hero_slideshow/cartegena_windows_2_color.jpg');
 }
 
 #slide_three .bw-frame {
-	background: url('/images/hero_slideshow/flower_1_bw.jpg') 50% 50% no-repeat;
+	background-image: url('/images/hero_slideshow/flower_1_bw.jpg');
 }
 
 #slide_three .color-frame {
-	background: url('/images/hero_slideshow/flower_1_color.jpg') 50% 50% no-repeat;
+	background-image: url('/images/hero_slideshow/flower_1_color.jpg');
 }
 
 #slide_four .bw-frame {
-	background: url('/images/hero_slideshow/cartegena_windows_1_bw.jpg') 50% 50% no-repeat;
+	background-image: url('/images/hero_slideshow/cartegena_windows_1_bw.jpg');
 }
 
 #slide_four .color-frame {
-	background: url('/images/hero_slideshow/cartegena_color_bw_series_1_color.jpg') 50% 50% no-repeat;
+	background-image: url('/images/hero_slideshow/cartegena_color_bw_series_1_color.jpg');
 }
 
-#about-me {
+nav {
+	width: 100%;
+	height: 45px;
+	background: rgba(255,255,255,1);
+	z-index: 999;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 10px 20px;
+}
+
+nav ul li a {
+	color: #000;
+}
+
+.section {
 	width: 100%;
 	height: 100vh;
 	margin: 0;
+	padding-top: 145px;
+}
+
+.section-content {
+	width: 100%;
+	max-width: 970px;
+	margin: 0 auto;
+
+}
+
+#about-me {
 	background: #000;
 	color: #fff;
+}
+
+.is-sticky.sticky {
+	position: fixed;
+	top: 95px;
+}
+
+#archive {
+	background: #fff;
+	color: #000;
 }
