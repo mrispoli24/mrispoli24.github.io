@@ -1,6 +1,9 @@
 html, body {
 	/*background: url('/images/cartographer.png') 0 0 repeat;*/
 	height: 100%;
+	font-family: 'Dosis', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
 }
 
 #wrapper {
@@ -22,15 +25,28 @@ html, body {
 	padding: 80px 40px;
 }
 
-h1,
-h2,
-h3,
+h1 {
+	font-size: 300%;
+}
+h2 {
+	font-size: 250%;
+}
+h3 {
+	font-size: 150%;
+}
 h4,
 h5,
-h6,
-header span,
-.posts li {
-	font-family: 'Special Elite', cursive;
+h6 {
+	font-size: 125%;
+}
+span,
+li,
+p {
+	font-size: 100%;
+}
+
+.small {
+	font-size: 75%;
 }
 
 .elastic {
@@ -58,7 +74,7 @@ header span,
 
 #header-details {
 	position: fixed;
-	height: 95px;
+	height: 120px;
 	z-index: 999;
 	background: rgba(0,0,0,1);
 }
@@ -209,7 +225,7 @@ nav ul li a:focus {
 	width: 100%;
 	height: 100vh;
 	margin: 0;
-	padding-top: 145px;
+	padding-top: 155px;
 }
 
 .section-content {
@@ -226,7 +242,7 @@ nav ul li a:focus {
 
 .is-sticky.sticky {
 	position: fixed;
-	top: 95px;
+	top: 120px;
 }
 
 #archive {
