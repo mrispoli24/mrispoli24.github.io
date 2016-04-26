@@ -85,7 +85,7 @@ p {
 
 #header-details {
 	position: fixed;
-	height: 95px;
+	min-height: 95px;
 	z-index: 999;
 	background: rgba(0,0,0,1);
 }
