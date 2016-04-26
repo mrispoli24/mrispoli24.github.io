@@ -260,3 +260,13 @@ nav ul li a:focus {
 	background: #fff;
 	color: #000;
 }
+
+@media screen and max-width(768px) {
+#header-details {
+	position: relative;
+}
+
+#post-wrapper .post {
+	padding: 0;
+}
+}
