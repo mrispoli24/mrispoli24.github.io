@@ -14,9 +14,6 @@ html, body {
 	background: #fff;
 }
 
-#post-wrapper {
-	background: url('/images/cartographer.png') 0 0 repeat;
-}
 
 #post-wrapper .post {
 	background: #fff;
