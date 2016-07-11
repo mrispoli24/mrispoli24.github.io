@@ -36,13 +36,13 @@ The dynamic component `{{ form_action }}` is populated with the *Mailchimp form 
 The default form action from Mailchimp looks like this:
 
 ```
-//sitename.us10.list-manage.com/subscribe/post?u=c5e9a550327eec33086b6e7bc&amp;id=8c9ee2422c
+//sitename.us10.list-manage.com/subscribe/post?u=c234edsd2323423421q5ad&amp;id=2c3ss234c
 ```
 
 It must be modified slightly to use `post-json` and add `&c=?` to the end of the URL if you are working in a staging environment (key here is the domain is different from what the go live domain will be).
 
 ```
-//sitename.us10.list-manage.com/subscribe/post-json?u=c5e9a550327eec33086b6e7bc&amp;id=8c9ee2422c&c=?
+//sitename.us10.list-manage.com/subscribe/post-json?u=c234edsd2323423421q5ad&amp;id=2c3ss234c&c=?
 ```
 
 ## The JS
