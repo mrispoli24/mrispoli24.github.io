@@ -51,7 +51,9 @@
 			<nav class="is-sticky col-md-12">
 				<ul>
 					<li><a href="#about-me">about me</a></li>
+					<li><a href="#prof-exp">professional experience</a></li>
 					<li><a href="#archive">field notes</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#contact-popup">contact me</a></li>
 				</ul>
 			</nav>
 			<div id="about-me" class="section col-md-12">
@@ -60,6 +62,56 @@
 					<p>I am a frontend designer and engineer specializing in creative website and user interface solutions. I have a wide array of experience from working with digital agencies to working with emerging SaaS marketing solutions. </p>
 					<p>My journey into the world of design began in photography, in the dark room of my high school where I learned the beauty of unique composition and the simplicity of seeing the world in black and white. My passion for technology led me into the world of frontend engineering where I honed my skills in HTML, CSS, and javascript. I specialize in responsive website and UI development for businesses large and small. I am experienced in CMS development as well as front end MVC frameworks such and React and AngularJS.</p>
 					<p>My expertise and passion lives in the frontend, where I can blur the line that separates the machine from the visceral. From time to time I still break out the camera as you will see my work adorning this site running on top of a web experience that is uniquely me.</p>
+				</div>
+			</div>
+			<div id="prof-exp" class="section col-md-12">
+				<div class="section-content">
+					<h2>Professional Experience</h2>
+					<div id="company-logos" class="row">
+						<div id="ndx" class="company col-md-4 col-sm-4">
+							<div class="company-inner">
+								<div class="company-overlay">
+									<i class="glyphicon glyphicon-plus white"></i>
+								</div>
+							</div>
+						</div>
+						<div id="sysgen" class="company col-md-4 col-sm-4">
+							<div class="company-inner">
+								<div class="company-overlay">
+									<i class="glyphicon glyphicon-plus white"></i>
+								</div>
+							</div>
+						</div>
+						<div id="olapic" class="company col-md-4 col-sm-4">
+							<div class="company-inner">
+								<div class="company-overlay">
+									<i class="glyphicon glyphicon-plus white"></i>
+								</div>
+							</div>
+						</div>
+						<div id="bluecore" class="company col-md-4 col-sm-4">
+							<div class="company-inner">
+								<div class="company-overlay">
+									<i class="glyphicon glyphicon-plus white"></i>
+								</div>
+							</div>
+						</div>
+						<div id="bronz-agency" class="company col-md-4 col-sm-4">
+							<div class="company-inner">
+								<div class="company-overlay">
+									<i class="glyphicon glyphicon-plus white"></i>
+								</div>
+							</div>
+						</div>
+						<div id="you-cta" class="company col-md-4" data-toggle="modal" data-target="#contact-popup">
+							<div class="company-inner">
+								<span>YOU?</span>
+								<div class="company-overlay">
+									<i class="glyphicon glyphicon-plus white"></i>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div id="archive" class="section col-md-12">
@@ -86,5 +138,43 @@
 			</div>
 		</div>
 	</div>
+	<div id="contact-popup" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Hire Me</h4>
+      </div>
+      <div class="modal-body">
+				<form id="contact-form">
+						<div class="form-group">
+							<input id="name" class="form-control" type="text" name="name" placeholder="name"/>
+							<span id="name-error" class="error-msg">Please enter your name.</span>
+						</div>
+						<div class="form-group">
+							<input id="replyTo" class="form-control" type="email" name="_replyto" placeholder="email"/>
+							<span id="email-error" class="error-msg">Please enter a valid email.</span>
+						</div>
+						<div class="form-group">
+							<input id="subject" class="form-control" type="text" name="_subject" placeholder="Subject"/>
+							<span id="subject-error" class="error-msg">Please enter a subject.</span>
+						</div>
+						<input id="gotcha" type="text" name="_gotcha" style="display: none;" />
+						<div class="form-group">
+							<textarea id="message" class="form-control" type="text" name="message" placeholder="How can I help?"/></textarea>
+							<span id="message-error" class="error-msg">Please enter a message.</span>
+						</div>
+						<div class="form-group">
+							<input class="btn btn-success" type="submit" value="Send">
+						</div>
+				</form>
+				<p id="success-message">Thank you for your submission, I will reach out shortly.</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script type="text/javascript">
+
+</script>
 </body>
 </html>
