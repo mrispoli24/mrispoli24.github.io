@@ -11,12 +11,12 @@ $(document).ready(function(){
 
   function unstick(el) {
     el.removeClass('sticky');
-    el.next('.section').css('margin-top', '0');
+    el.parent().next().css('margin-top', '0');
   };
 
   function stick(el) {
     el.addClass('sticky');
-    el.next('.section').css('margin-top', el.height());
+    el.parent().next().css('margin-top', el.height());
   };
 
   function stickyAction() {
@@ -43,7 +43,12 @@ $(document).ready(function(){
     }
   });
   //contact form script modal fire
-  $('#contact-popup').modal({show:false})
+  $('#contact-popup').modal({show:false});
+  $('#ndx-popup').modal({show:false});
+  $('#sysgen-popup').modal({show:false});
+  $('#olapic-popup').modal({show:false});
+  $('#bluecore-popup').modal({show:false});
+  $('#bronz-popup').modal({show:false});
   //email address validator
   function isValidEmail(email, e){
   	   var is_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

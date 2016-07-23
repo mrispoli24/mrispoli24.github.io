@@ -198,7 +198,7 @@ p {
 }
 
 #home-content {
-	margin-top: -85px;
+	margin-top: -45px;
 }
 
 nav {
@@ -210,6 +210,7 @@ nav {
 
 nav ul {
 	list-style-type: none;
+	padding: 0;
 }
 
 nav ul li {
@@ -241,7 +242,8 @@ nav ul li a:focus {
 	width: 100%;
 	min-height: 100vh;
 	margin: 0;
-	padding-top: 145px;
+	padding-top: 165px;
+	padding-bottom: 165px;
 }
 
 .section-content {
@@ -251,26 +253,24 @@ nav ul li a:focus {
 
 }
 
-.section:nth-child(odd) {
+#about-me,
+#archive {
 	background: #000;
 	color: #fff;
 }
 
-.section:nth-child(even) {
+#prof-exp {
 	background: #fff;
 	color: #000;
 }
 
-#about-me {
-
-}
-
-#prof-exp {
-
-}
-
-#company-logos {
-
+#profile-photo {
+	display: block;
+	margin: 30px auto;
+	width: 200px;
+	height: auto;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
 }
 
 .company {
@@ -376,12 +376,32 @@ nav ul li a:focus {
 	color: #a94442;
 }
 
-@media screen and max-width(768px) {
+@media (max-width: 768px) {
 #header-details {
 	position: relative;
+}
+
+h1 {
+	font-size: 185%;
 }
 
 #post-wrapper .post {
 	padding: 0;
 }
+
+.company-inner {
+	width: 150px;
+	height: 150px;
+	-webkit-background-size: 120px auto;
+	-moz-background-size: 120px auto;
+	-ms-background-size: 120px auto;
+	background-size: 120px auto;
+
+}
+
+#you-cta .company-inner span {
+	line-height: 150px;
+	margin-left: -75px;
+}
+
 }

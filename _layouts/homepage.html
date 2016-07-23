@@ -6,93 +6,107 @@
 <body>
 	<div id ="wrapper" class="container-fluid">
 		{% include header.html %}
-		<hr>
-		<div id="home-content" class="row contents">
-			<div id="sticky-anchor"></div>
-			<nav class="is-sticky col-md-12">
-				<ul>
-					<li><a href="#about-me">about me</a></li>
-					<li><a href="#prof-exp">professional experience</a></li>
-					<li><a href="#archive">field notes</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#contact-popup">contact me</a></li>
-				</ul>
-			</nav>
-			<div id="about-me" class="section col-md-12">
-				<div class="section-content">
-					<h2>About Me</h2>
-					<p>I am a frontend designer and engineer specializing in creative website and user interface solutions. I have a wide array of experience from working with digital agencies to working with emerging SaaS marketing solutions. </p>
-					<p>My journey into the world of design began in photography, in the dark room of my high school where I learned the beauty of unique composition and the simplicity of seeing the world in black and white. My passion for technology led me into the world of frontend engineering where I honed my skills in HTML, CSS, and javascript. I specialize in responsive website and UI development for businesses large and small. I am experienced in CMS development as well as front end MVC frameworks such and React and AngularJS.</p>
-					<p>My expertise and passion lives in the frontend, where I can blur the line that separates the machine from the visceral. From time to time I still break out the camera as you will see my work adorning this site running on top of a web experience that is uniquely me.</p>
+		<div id="home-content" class="contents">
+			<div class="row">
+				<div id="sticky-anchor"></div>
+				<nav class="is-sticky col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<ul>
+						<li><a href="#about-me">about me</a></li>
+						<li><a href="#prof-exp">professional experience</a></li>
+						<li><a href="#archive">field notes</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#contact-popup">contact me</a></li>
+					</ul>
+				</nav>
+
+			</div>
+			<div class="row">
+				<div id="about-me" class="section col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="section-content">
+						<div class="row">
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<img id="profile-photo" src="/images/profile_photo.jpg" alt="michael rispoli" />
+							</div>
+							<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+								<p>I am a frontend designer and engineer specializing in creative website and user interface solutions. I have a wide array of experience from working with digital agencies to working with emerging SaaS marketing solutions. </p>
+								<p>My journey into the world of design began in photography, in the dark room of my high school where I learned the beauty of unique composition and the simplicity of seeing the world in black and white. My passion for technology led me into the world of frontend engineering where I honed my skills in HTML, CSS, and javascript. I specialize in responsive website and UI development for businesses large and small. I am experienced in CMS development as well as front end MVC frameworks such and React and AngularJS.</p>
+								<p>My expertise and passion lives in the frontend, where I can blur the line that separates the machine from the visceral. From time to time I still break out the camera as you will see my work adorning this site running on top of a web experience that is uniquely me.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div id="prof-exp" class="section col-md-12">
-				<div class="section-content">
-					<h2>Professional Experience</h2>
-					<div id="company-logos" class="row">
-						<div id="ndx" class="company col-md-4 col-sm-4">
-							<div class="company-inner">
-								<div class="company-overlay">
-									<i class="glyphicon glyphicon-plus white"></i>
+			<div class="row">
+				<div id="prof-exp" class="section col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="section-content">
+						<div id="company-logos" class="row">
+							<div id="ndx" class="company col-md-4 col-sm-4 col-xs-6" data-toggle="modal" data-target="#ndx-popup">
+								<div class="company-inner">
+									<div class="company-overlay">
+										<i class="glyphicon glyphicon-plus white"></i>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div id="sysgen" class="company col-md-4 col-sm-4">
-							<div class="company-inner">
-								<div class="company-overlay">
-									<i class="glyphicon glyphicon-plus white"></i>
+							<div id="sysgen" class="company col-md-4 col-sm-4 col-xs-6" data-toggle="modal" data-target="#sysgen-popup">
+								<div class="company-inner">
+									<div class="company-overlay">
+										<i class="glyphicon glyphicon-plus white"></i>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div id="olapic" class="company col-md-4 col-sm-4">
-							<div class="company-inner">
-								<div class="company-overlay">
-									<i class="glyphicon glyphicon-plus white"></i>
+							<div id="olapic" class="company col-md-4 col-sm-4 col-xs-6" data-toggle="modal" data-target="#olapic-popup">
+								<div class="company-inner">
+									<div class="company-overlay">
+										<i class="glyphicon glyphicon-plus white"></i>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div id="bluecore" class="company col-md-4 col-sm-4">
-							<div class="company-inner">
-								<div class="company-overlay">
-									<i class="glyphicon glyphicon-plus white"></i>
+							<div id="bluecore" class="company col-md-4 col-sm-4 col-xs-6" data-toggle="modal" data-target="#bluecore-popup">
+								<div class="company-inner">
+									<div class="company-overlay">
+										<i class="glyphicon glyphicon-plus white"></i>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div id="bronz-agency" class="company col-md-4 col-sm-4">
-							<div class="company-inner">
-								<div class="company-overlay">
-									<i class="glyphicon glyphicon-plus white"></i>
+							<div id="bronz-agency" class="company col-md-4 col-sm-4 col-xs-6" data-toggle="modal" data-target="#bronz-popup">
+								<div class="company-inner">
+									<div class="company-overlay">
+										<i class="glyphicon glyphicon-plus white"></i>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div id="you-cta" class="company col-md-4" data-toggle="modal" data-target="#contact-popup">
-							<div class="company-inner">
-								<span>YOU?</span>
-								<div class="company-overlay">
-									<i class="glyphicon glyphicon-plus white"></i>
+							<div id="you-cta" class="company col-md-4 col-sm-4 col-xs-6" data-toggle="modal" data-target="#contact-popup">
+								<div class="company-inner">
+									<span>YOU?</span>
+									<div class="company-overlay">
+										<i class="glyphicon glyphicon-plus white"></i>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div id="archive" class="section col-md-12">
-				<div class="section-content">
-					<h2>.field-notes</h2>
-					<ul class="posts">
-					  {% for post in site.posts %}
-					    <li><span>{{ post.date | date_to_string }}</span> &#123; <a href="{{ post.url }}">{{ post.title }}</a> &#125;</li>
-					  {% endfor %}
-					</ul>
+			<div class="row">
+				<div id="archive" class="section col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="section-content">
+						<h2>.field-notes</h2>
+						<ul class="posts">
+						  {% for post in site.posts %}
+						    <li><span>{{ post.date | date_to_string }}</span> &#123; <a href="{{ post.url }}">{{ post.title }}</a> &#125;</li>
+						  {% endfor %}
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- modal html -->
 	<div id="contact-popup" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Hire Me</h4>
+        <h3 class="modal-title">Need To Talk?</h3>
       </div>
       <div class="modal-body">
 				<form id="contact-form">
@@ -122,8 +136,153 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<script type="text/javascript">
+<!-- about agencies modal -->
+<div id="ndx-popup" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">New Dynamx</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+					<div class="col-md-12">
+						<h4>Experience:</h4>
+						<p>A creative and marketing agency specializing in small to medium-sized business ecommerce solutions. Here I was charged with constructing both ecommerce sites as well as blogs and brochure websites for professionals in a varienty of CMS solutions. I also designed and built front-end user interfaces for companies looking for a front end implementation to later be incorporated into a platform.</p>
+					</div>
+					<div class="col-md-12">
+						<h4>Tech:</h4>
+						<ul>
+							<li>Responsive Design</li>
+							<li>CSS3</li>
+							<li>HTML5</li>
+							<li>javascript</li>
+							<li>jQuery</li>
+							<li>BigCommerce</li>
+							<li>Magento</li>
+							<li>WordPress</li>
+							<li>Weebly</li>
+							<li>Drupal</li>
+							<li>Bootstrap</li>
+						</ul>
+					</div>
+				</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-</script>
+<div id="sysgen-popup" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Sysgen Media</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+					<div class="col-md-12">
+						<h4>Experience:</h4>
+						<p>A creative and marketing agency specializing in small to medium-sized business ecommerce solutions. Here I was charged with designing and constructing responsive sites for ecommerce as well as blogs and businesses for professionals in Magento, Joomla and Wordpress. I was also responsible for designing and developing responsive email campaigns for clients.</p>
+					</div>
+					<div class="col-md-12">
+						<h4>Tech:</h4>
+						<ul>
+							<li>Responsive Design</li>
+							<li>CSS3</li>
+							<li>HTML5</li>
+							<li>javascript</li>
+							<li>jQuery</li>
+							<li>php</li>
+							<li>Magento</li>
+							<li>WordPress</li>
+							<li>Joomla</li>
+							<li>Bootstrap</li>
+							<li>Mailchimp</li>
+							<li>Constant Contact</li>
+						</ul>
+					</div>
+				</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="olapic-popup" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Olapic</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+					<div class="col-md-12">
+						<h4>Experience:</h4>
+						<p>Olapic is a SaaS solution for curating and showcasing user generated content from social channels like instagram alongside the products that are featured in them. Here my was changed with developing gallery widgets on client websites from large enterprise brands to medium sized businesses that were on brand and pixel perfect. My team was also responsible for ingesting product feeds to from clients to specification. I was responsible for being resident expert in responsive design and implementing responsive design best practices and standards across the organization.</p>
+					</div>
+					<div class="col-md-12">
+						<h4>Tech:</h4>
+						<ul>
+							<li>Responsive Design</li>
+							<li>CSS3</li>
+							<li>HTML5</li>
+							<li>jQuery</li>
+							<li>XML</li>
+							<li>Handlebars JS</li>
+							<li>Angular JS</li>
+							<li>Bootstrap</li>
+							<li>Technical Writing</li>
+							<li>UI Prototyping</li>
+						</ul>
+					</div>
+				</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="bluecore-popup" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Bluecore</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+					<div class="col-md-12">
+						<h4>Experience:</h4>
+					</div>
+					<div class="col-md-12">
+						<h4>Tech:</h4>
+					</div>
+				</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="bronz-popup" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Bronz Agency</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+					<div class="col-md-12">
+						<h4>Experience:</h4>
+					</div>
+					<div class="col-md-12">
+						<h4>Tech:</h4>
+					</div>
+				</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 </body>
 </html>
