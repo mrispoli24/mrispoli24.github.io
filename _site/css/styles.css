@@ -97,6 +97,19 @@ p {
 	text-align: center;
 }
 
+#header-details h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header-details h1 a:link,
+#header-details h1 a:visited,
+#header-details h1 a:hover,
+#header-details h1 a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
 #mobile-nav-toggle {
 	display: none;
 }
