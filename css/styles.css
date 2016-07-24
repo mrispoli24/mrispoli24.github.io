@@ -97,8 +97,8 @@ p {
 	text-align: center;
 }
 
-#wrapper #header-details {
-
+#mobile-nav-toggle {
+	display: none;
 }
 
 /* hero slideshow */
@@ -377,11 +377,36 @@ nav ul li a:focus {
 }
 
 @media (max-width: 768px) {
-#header-details {
-	position: relative;
+
+
+#header-details h1 {
+	font-size: 185%;
+	margin-top: 14px;
+	text-align: left;
 }
 
-h1 {
+#mobile-nav-toggle {
+	position: absolute;
+	top: 26px;
+	right: 18px;
+	display: block;
+	background-color: #000;
+	border-color: #fff;
+	color: #fff;
+}
+
+nav {
+	display: none;
+	position: fixed !important;
+	top: 95px;
+	left: 0;
+	height: 100vh;
+	background-color: rgba(255,255,255,0.8);
+}
+
+nav ul li {
+	display: list-item;
+	text-align: right;
 	font-size: 185%;
 }
 

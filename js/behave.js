@@ -31,7 +31,9 @@ $(document).ready(function(){
       }
   }
   // sticky nav
-  $(window).scroll(stickyAction);
+  if (window.innerWidth > 768) {
+    $(window).scroll(stickyAction);
+  }
   //scrolling animation
   $('a[href^="#"]').click(function(event) {
     var target = $($(this).attr('href'));
@@ -42,6 +44,16 @@ $(document).ready(function(){
         }, 1000);
     }
   });
+
+  //mobile nav toggle
+
+  $('#mobile-nav-toggle').click(function(){
+    var $this = $(this);
+    $this.find('i').hasClass('fa-navicon') ? $this.find('i').removeClass('fa-navicon').addClass('fa-close') : $this.find('i').removeClass('fa-close').addClass('fa-navicon');
+    $('nav').slideToggle();
+  });
+
+
   //contact form script modal fire
   $('#contact-popup').modal({show:false});
   $('#ndx-popup').modal({show:false});
