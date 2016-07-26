@@ -14,9 +14,6 @@ html, body {
 	background: #fff;
 }
 
-#post-wrapper {
-	background: url('/images/cartographer.png') 0 0 repeat;
-}
 
 #post-wrapper .post {
 	background: #fff;
@@ -88,7 +85,7 @@ p {
 
 #header-details {
 	position: fixed;
-	height: 95px;
+	min-height: 95px;
 	z-index: 999;
 	background: rgba(0,0,0,1);
 }
@@ -100,8 +97,21 @@ p {
 	text-align: center;
 }
 
-#wrapper #header-details {
+#header-details h1 a {
+	color: #fff;
+	text-decoration: none;
+}
 
+#header-details h1 a:link,
+#header-details h1 a:visited,
+#header-details h1 a:hover,
+#header-details h1 a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+#mobile-nav-toggle {
+	display: none;
 }
 
 /* hero slideshow */
@@ -201,7 +211,7 @@ p {
 }
 
 #home-content {
-	margin-top: -85px;
+	margin-top: -45px;
 }
 
 nav {
@@ -213,6 +223,7 @@ nav {
 
 nav ul {
 	list-style-type: none;
+	padding: 0;
 }
 
 nav ul li {
@@ -235,11 +246,17 @@ nav ul li a:focus {
 	outline: none;
 }
 
+.is-sticky.sticky {
+	position: fixed;
+	top: 95px;
+}
+
 .section {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	margin: 0;
-	padding-top: 145px;
+	padding-top: 15%;
+	padding-bottom: 15%;
 }
 
 .section-content {
@@ -249,17 +266,184 @@ nav ul li a:focus {
 
 }
 
-#about-me {
+#about-me,
+#archive {
 	background: #000;
 	color: #fff;
 }
 
-.is-sticky.sticky {
-	position: fixed;
-	top: 95px;
+#prof-exp {
+	background: #fff;
+	color: #000;
+}
+
+#profile-photo {
+	display: block;
+	margin: 30px auto;
+	width: 200px;
+	height: auto;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+
+.company {
+	padding: 20px 0;
+}
+
+
+.company-inner {
+	 position: relative;
+	 border: 1px solid #ebebeb;
+	 width: 200px;
+	 height: 200px;
+	 margin: 0 auto;
+	 background-position: 50% 50%;
+	 	background-repeat: no-repeat;
+	 	-webkit-background-size: 160px auto;
+	 	-moz-background-size: 160px auto;
+	 	-ms-background-size: 160px auto;
+	 	background-size: 160px auto;
+}
+
+#ndx .company-inner {
+	background-image: url('/images/ndx_logo.png');
+}
+
+#sysgen .company-inner {
+	background-image: url('/images/sysgen_logo.png');
+}
+
+#olapic .company-inner {
+	background-image: url('/images/olapic_logo.png');
+}
+
+#bluecore .company-inner {
+	background-image: url('/images/bluecore_logo.png');
+}
+
+#bronz-agency .company-inner {
+	background-image: url('/images/bronz_logo.png');
+}
+
+#you-cta .company-inner span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: block;
+	width: 100%;
+	line-height: 200px;
+	margin-left: -100px;
+	text-align: center;
+	font-size: 36px;
+}
+
+.company-overlay {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 200ms linear;
+	-moz-transition: all 200ms linear;
+	-ms-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+
+.company-inner:hover .company-overlay {
+	visibility: visible;
+	opacity: 1;
+}
+
+.company-overlay i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -25px;
+	font-size: 50px;
+	color: #fff;
 }
 
 #archive {
-	background: #fff;
-	color: #000;
+	background: #000;
+	color: #fff;
+}
+
+.form-group {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+#success-message {
+	display: none;
+}
+
+.error-msg {
+	display: none;
+	position: absolute;
+	bottom: -20px;
+	left: 5px;
+	font-size: 12px;
+	color: #a94442;
+}
+
+@media (max-width: 480px) {
+
+	#header-details h1 {
+		font-size: 185%;
+		margin-top: 14px;
+		text-align: left;
+	}
+
+	#mobile-nav-toggle {
+		position: absolute;
+		top: 26px;
+		right: 18px;
+		display: block;
+		background-color: #000;
+		border-color: #fff;
+		color: #fff;
+	}
+
+	nav {
+		display: none;
+		position: fixed !important;
+		top: 95px;
+		left: 0;
+		height: 100vh;
+		background-color: rgba(255,255,255,0.8);
+	}
+
+	nav ul li {
+		display: list-item;
+		text-align: right;
+		font-size: 185%;
+	}
+
+	#post-wrapper .post {
+		padding: 50px 0;
+	}
+
+	.section {
+    padding-top: 24%;
+    padding-bottom: 24%;
+	}
+
+	.company-inner {
+		width: 150px;
+		height: 150px;
+		-webkit-background-size: 120px auto;
+		-moz-background-size: 120px auto;
+		-ms-background-size: 120px auto;
+		background-size: 120px auto;
+
+	}
+
+	#you-cta .company-inner span {
+		line-height: 150px;
+		margin-left: -75px;
+	}
+
 }

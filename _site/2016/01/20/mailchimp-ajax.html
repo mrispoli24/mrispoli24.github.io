@@ -2,7 +2,9 @@
 <html>
 	<head>
 		<title>Mailchimp AJAX Integration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/css/styles.css">
@@ -15,8 +17,7 @@
 		<div id="post-wrapper" class="container-fluid">
 		<header class="row">
 	<div id="header-details" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<h1>Michael Rispoli Development</h1>
-		<span>/* creative frontend development | color the ordinary */</span>
+		<h1><a href="http://michaelrispolidevelopment.com">Michael Rispoli Development</a></h1>
 	</div>
 </header>
 
@@ -51,10 +52,10 @@
 <h2 id="mailchimp-form-action-url">Mailchimp form action URL</h2>
 
 <p>The default form action from Mailchimp looks like this:</p>
-<figure class="highlight"><pre><code class="language-text" data-lang="text">//sitename.us10.list-manage.com/subscribe/post?u=c5e9a550327eec33086b6e7bc&amp;amp;id=8c9ee2422c
+<figure class="highlight"><pre><code class="language-text" data-lang="text">//sitename.us10.list-manage.com/subscribe/post?u=[[USER_ID]]&amp;amp;id=[[LIST_ID]]
 </code></pre></figure>
 <p>It must be modified slightly to use <code>post-json</code> and add <code>&amp;c=?</code> to the end of the URL if you are working in a staging environment (key here is the domain is different from what the go live domain will be).</p>
-<figure class="highlight"><pre><code class="language-text" data-lang="text">//sitename.us10.list-manage.com/subscribe/post-json?u=c5e9a550327eec33086b6e7bc&amp;amp;id=8c9ee2422c&amp;c=?
+<figure class="highlight"><pre><code class="language-text" data-lang="text">//sitename.us10.list-manage.com/subscribe/post-json?u=[[USER_ID]]&amp;amp;id=[[LIST_ID]]&amp;c=?
 </code></pre></figure>
 <h2 id="the-js">The JS</h2>
 
