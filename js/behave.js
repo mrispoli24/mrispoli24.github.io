@@ -20,6 +20,7 @@ $(document).ready(function(){
   };
 
   function stickyAction() {
+    if (window.innerWidth > 768) {
       var scrollTop = $(window).scrollTop() + $('#header-details').height();
       var $this = $('.is-sticky');
       var offsetTop = $('#sticky-anchor').offset().top;
@@ -29,11 +30,12 @@ $(document).ready(function(){
       } else {
         unstick($this);
       }
+    }
   }
   // sticky nav
-  if (window.innerWidth > 768) {
-    $(window).scroll(stickyAction);
-  }
+
+  $(window).scroll(stickyAction);
+
   //scrolling animation
   $('a[href^="#"]').click(function(event) {
     var target = $($(this).attr('href'));

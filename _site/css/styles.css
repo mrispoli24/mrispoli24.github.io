@@ -255,8 +255,7 @@ nav ul li a:focus {
 	width: 100%;
 	min-height: 100vh;
 	margin: 0;
-	padding-top: 165px;
-	padding-bottom: 165px;
+	padding: 15% 0;
 }
 
 .section-content {
@@ -391,55 +390,54 @@ nav ul li a:focus {
 
 @media (max-width: 768px) {
 
+	#header-details h1 {
+		font-size: 185%;
+		margin-top: 14px;
+		text-align: left;
+	}
 
-#header-details h1 {
-	font-size: 185%;
-	margin-top: 14px;
-	text-align: left;
-}
+	#mobile-nav-toggle {
+		position: absolute;
+		top: 26px;
+		right: 18px;
+		display: block;
+		background-color: #000;
+		border-color: #fff;
+		color: #fff;
+	}
 
-#mobile-nav-toggle {
-	position: absolute;
-	top: 26px;
-	right: 18px;
-	display: block;
-	background-color: #000;
-	border-color: #fff;
-	color: #fff;
-}
+	nav {
+		display: none;
+		position: fixed !important;
+		top: 95px;
+		left: 0;
+		height: 100vh;
+		background-color: rgba(255,255,255,0.8);
+	}
 
-nav {
-	display: none;
-	position: fixed !important;
-	top: 95px;
-	left: 0;
-	height: 100vh;
-	background-color: rgba(255,255,255,0.8);
-}
+	nav ul li {
+		display: list-item;
+		text-align: right;
+		font-size: 185%;
+	}
 
-nav ul li {
-	display: list-item;
-	text-align: right;
-	font-size: 185%;
-}
+	#post-wrapper .post {
+		padding: 50px 0;
+	}
 
-#post-wrapper .post {
-	padding: 0;
-}
+	.company-inner {
+		width: 150px;
+		height: 150px;
+		-webkit-background-size: 120px auto;
+		-moz-background-size: 120px auto;
+		-ms-background-size: 120px auto;
+		background-size: 120px auto;
 
-.company-inner {
-	width: 150px;
-	height: 150px;
-	-webkit-background-size: 120px auto;
-	-moz-background-size: 120px auto;
-	-ms-background-size: 120px auto;
-	background-size: 120px auto;
+	}
 
-}
-
-#you-cta .company-inner span {
-	line-height: 150px;
-	margin-left: -75px;
-}
+	#you-cta .company-inner span {
+		line-height: 150px;
+		margin-left: -75px;
+	}
 
 }
