@@ -20,7 +20,7 @@ $(document).ready(function(){
   };
 
   function stickyAction() {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 480) {
       var scrollTop = $(window).scrollTop() + $('#header-details').height();
       var $this = $('.is-sticky');
       var offsetTop = $('#sticky-anchor').offset().top;

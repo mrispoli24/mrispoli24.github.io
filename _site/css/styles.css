@@ -389,7 +389,7 @@ nav ul li a:focus {
 	color: #a94442;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
 	#header-details h1 {
 		font-size: 185%;
