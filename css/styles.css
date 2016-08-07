@@ -366,6 +366,10 @@ nav ul li a:focus {
 	color: #fff;
 }
 
+.company:focus{
+	outline: 0;
+}
+
 #archive {
 	background: #000;
 	color: #fff;
@@ -389,11 +393,26 @@ nav ul li a:focus {
 	color: #a94442;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
+
+	#header-details {
+		min-height: 60px;
+	}
 
 	#header-details h1 {
 		font-size: 185%;
 		margin-top: 14px;
+	}
+
+	.is-sticky.sticky {
+		top: 60px;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	#header-details h1 {
 		text-align: left;
 	}
 
