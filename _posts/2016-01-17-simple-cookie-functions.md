@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Some Simple Useful Cookie Functions (vanilla js)"
+category: Tips and Tricks
 date:   2016-01-17
 ---
 

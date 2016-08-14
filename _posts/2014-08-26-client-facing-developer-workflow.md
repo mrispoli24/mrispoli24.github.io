@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Client Facing Developer: A Workflow of Distractions"
+category: Essays
 date:   2014-08-26
 ---
 

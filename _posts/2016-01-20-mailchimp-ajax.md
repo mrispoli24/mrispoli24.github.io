@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Mailchimp AJAX Integration"
+category: Tips and Tricks
 date:   2016-01-20
 ---
 

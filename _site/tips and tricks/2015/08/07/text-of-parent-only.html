@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title>jQuery to Return Text Only If NOT in a Child Node</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/syntax.css">
+<script src="/js/behave.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,300,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+		<div id="post-wrapper" class="container-fluid">
+		<header class="row">
+	<div id="header-details" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h1><a href="http://michaelrispolidevelopment.com">Michael Rispoli Development</a></h1>
+	</div>
+</header>
+
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="post">
+				<h1 id="getting-just-the-text-of-the-parent-but-not-its-children">Getting just the text of the parent but not its children.</h1>
+
+<p>Sometimes it&#39;s useful to get just the text of the parent node but not take any of it&#39;s children. Take this example:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">&lt;span class=&quot;promotion&quot;&gt;
+  Enjoy up to 70% off at The End of Season Sale.
+  &lt;a href=&quot;https://www.mysupersite.com/details/&quot;&gt;DETAILS&lt;/a&gt;
+  &lt;a href=&quot;https://www.mysupersite.com/sale-shop-all/&quot;&gt;SHOP NOW&lt;/a&gt;
+&lt;/span&gt;
+</code></pre></figure>
+<p>The secret is to use a few jQuery functions to clone the element, kill the children, and save the parent.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">
+jQuery(&#39;.promotion&#39;).clone().children().remove().end().text().trim();
+
+</code></pre></figure>
+<p>There are a few other ways to do this but this one works without knowing what you are looking to remove, which keeps everything nice and automated. While it is a simple snippet I find myself using it quite often for quick development fixes and checks.</p>
+
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

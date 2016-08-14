@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Adaptive Vs. Responsive"
+category: Essays
 date:   2014-08-01
 ---
 

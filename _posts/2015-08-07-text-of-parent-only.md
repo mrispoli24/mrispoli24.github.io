@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "jQuery to Return Text Only If NOT in a Child Node"
+category: Tips and Tricks
 date:   2015-08-07
 ---
 

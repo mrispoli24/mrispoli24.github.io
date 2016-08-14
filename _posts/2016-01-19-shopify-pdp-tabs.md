@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Insta-tabs for Shopify PDP's"
+category: Tips and Tricks
 date:   2016-01-19
 ---
 

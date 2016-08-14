@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Regex to Validate Email Addresses"
+category: Tips and Tricks
 date:   2016-01-18
 ---
 
