@@ -32,87 +32,105 @@
 <h2 id="set-cookie">Set Cookie</h2>
 
 <p>Sets a cookie.</p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js">function setCookie(cname, cvalue, exdays) {
-  try {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = &quot;expires=&quot;+d.toUTCString();
-    document.cookie = cname + &quot;=&quot; + cvalue + &quot;; &quot; + expires;
-  } catch(error){}
-}
-</code></pre></figure>
-<table><thead>
-<tr>
-<th>Argument</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>cname</code></td>
-<td>The name of the cookie</td>
-</tr>
-<tr>
-<td><code>cvalue</code></td>
-<td>The value of the cookie</td>
-</tr>
-<tr>
-<td><code>exdays</code></td>
-<td>How long until the cookie expires in days</td>
-</tr>
-</tbody></table>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">setCookie</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">cvalue</span><span class="p">,</span> <span class="nx">exdays</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+    <span class="nx">d</span><span class="p">.</span><span class="nx">setTime</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="nx">exdays</span><span class="o">*</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">1000</span><span class="p">));</span>
+    <span class="kd">var</span> <span class="nx">expires</span> <span class="o">=</span> <span class="s2">"expires="</span><span class="o">+</span><span class="nx">d</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">();</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="nx">cname</span> <span class="o">+</span> <span class="s2">"="</span> <span class="o">+</span> <span class="nx">cvalue</span> <span class="o">+</span> <span class="s2">"; "</span> <span class="o">+</span> <span class="nx">expires</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">cname</code></td>
+      <td>The name of the cookie</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cvalue</code></td>
+      <td>The value of the cookie</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">exdays</code></td>
+      <td>How long until the cookie expires in days</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="check-cookie">Check Cookie</h2>
 
 <p>Checks the existence of a cookie with a simple boolean return.</p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js">function checkCookie(cname) {
-  try {
-    var check=getCookie(cname);
-    if (check != &quot;&quot;) {
-      return true;
-    }else{
-      return false;
-    }
-  } catch(error){}
-}
-</code></pre></figure>
-<table><thead>
-<tr>
-<th>Argument</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>cname</code></td>
-<td>The name of the cookie to check</td>
-</tr>
-</tbody></table>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">checkCookie</span><span class="p">(</span><span class="nx">cname</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">check</span><span class="o">=</span><span class="nx">getCookie</span><span class="p">(</span><span class="nx">cname</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">check</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+      <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">cname</code></td>
+      <td>The name of the cookie to check</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="get-cookie">Get Cookie</h2>
 
 <p>Retrieves a cookie.</p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js">function getCookie(cname) {
-  try {
-    var name = cname + &quot;=&quot;;
-    var ca = document.cookie.split(&#39;;&#39;);
-    for(var i=0; i&lt;ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==&#39; &#39;) c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return &quot;&quot;;
-} catch(error){}
-</code></pre></figure>
-<table><thead>
-<tr>
-<th>Argument</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>cname</code></td>
-<td>The name of the cookie to retrieve</td>
-</tr>
-</tbody></table>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getCookie</span><span class="p">(</span><span class="nx">cname</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">cname</span> <span class="o">+</span> <span class="s2">"="</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">ca</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">';'</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">ca</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">ca</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="k">while</span> <span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">==</span><span class="s1">' '</span><span class="p">)</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">c</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="s2">""</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){}</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">cname</code></td>
+      <td>The name of the cookie to retrieve</td>
+    </tr>
+  </tbody>
+</table>
 
 				</div>
 			</div>

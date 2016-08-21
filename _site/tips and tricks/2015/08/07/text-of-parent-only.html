@@ -27,18 +27,24 @@
 				<div class="post">
 				<h1 id="getting-just-the-text-of-the-parent-but-not-its-children">Getting just the text of the parent but not its children.</h1>
 
-<p>Sometimes it&#39;s useful to get just the text of the parent node but not take any of it&#39;s children. Take this example:</p>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">&lt;span class=&quot;promotion&quot;&gt;
-  Enjoy up to 70% off at The End of Season Sale.
-  &lt;a href=&quot;https://www.mysupersite.com/details/&quot;&gt;DETAILS&lt;/a&gt;
-  &lt;a href=&quot;https://www.mysupersite.com/sale-shop-all/&quot;&gt;SHOP NOW&lt;/a&gt;
-&lt;/span&gt;
-</code></pre></figure>
-<p>The secret is to use a few jQuery functions to clone the element, kill the children, and save the parent.</p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js">
-jQuery(&#39;.promotion&#39;).clone().children().remove().end().text().trim();
+<p>Sometimes it’s useful to get just the text of the parent node but not take any of it’s children. Take this example:</p>
 
-</code></pre></figure>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"promotion"</span><span class="nt">&gt;</span>
+  Enjoy up to 70% off at The End of Season Sale.
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.mysupersite.com/details/"</span><span class="nt">&gt;</span>DETAILS<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.mysupersite.com/sale-shop-all/"</span><span class="nt">&gt;</span>SHOP NOW<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+</code></pre>
+</div>
+
+<p>The secret is to use a few jQuery functions to clone the element, kill the children, and save the parent.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code>
+<span class="nx">jQuery</span><span class="p">(</span><span class="s1">'.promotion'</span><span class="p">).</span><span class="nx">clone</span><span class="p">().</span><span class="nx">children</span><span class="p">().</span><span class="nx">remove</span><span class="p">().</span><span class="nx">end</span><span class="p">().</span><span class="nx">text</span><span class="p">().</span><span class="nx">trim</span><span class="p">();</span>
+
+</code></pre>
+</div>
+
 <p>There are a few other ways to do this but this one works without knowing what you are looking to remove, which keeps everything nice and automated. While it is a simple snippet I find myself using it quite often for quick development fixes and checks.</p>
 
 				</div>

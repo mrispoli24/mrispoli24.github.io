@@ -33,21 +33,21 @@
 
 <p>The problem I found with that particular project was that I was handed three designs, at three breakpoints (1152px, 768px, 480px), but the layouts changed so much that it was clear my <em>responsive</em> project was in fact destined to be <em>adaptive</em>. Hell bent on meeting the <em>true</em> responsive definition, I was left to fill in the middle ground and learned a lot as I struggled to extrapolate the design and make the transition between resolutions appear seamless.</p>
 
-<p>After battling the frustration of that first project, I had come to the conclusion there were two options, a fixed width layout, or a fully responsive solution. Adaptive just felt like a dirty word to me. I wanted the site to move like liquid, casually filling it&#39;s container perfectly at every browser resize. Then I learned about timelines, cost constraints, and client interference.</p>
+<p>After battling the frustration of that first project, I had come to the conclusion there were two options, a fixed width layout, or a fully responsive solution. Adaptive just felt like a dirty word to me. I wanted the site to move like liquid, casually filling it’s container perfectly at every browser resize. Then I learned about timelines, cost constraints, and client interference.</p>
 
-<p>A fully responsive site usually requires a full redesign of the previous site, and last minute changes can leave you tearing your hair out in frustration as your beautiful liquid mercury terminator get&#39;s shredded to bits. You don&#39;t always get the option of a full redesign, and you don&#39;t always get the option of executing <em>your</em> vision completely.</p>
+<p>A fully responsive site usually requires a full redesign of the previous site, and last minute changes can leave you tearing your hair out in frustration as your beautiful liquid mercury terminator get’s shredded to bits. You don’t always get the option of a full redesign, and you don’t always get the option of executing <em>your</em> vision completely.</p>
 
-<p>What many clients want, is something in the middle--something that makes both money and it&#39;s launch date.</p>
+<p>What many clients want, is something in the middle–something that makes both money and it’s launch date.</p>
 
 <h3 id="the-spectrum-problem">.The Spectrum Problem</h3>
 
-<p>Today I work integrating third party software modules into e-commerce sites, where the term <em>responsive</em> has become a buzz word. The question in scoping conversations is always posed, <em>&quot;is your site responsive?&quot;</em> And a response of <em>yes</em> from an ecom director or marketing coordinator can mean just about anything from a completely fluid layout to a separate mobile (m.dot) template.</p>
+<p>Today I work integrating third party software modules into e-commerce sites, where the term <em>responsive</em> has become a buzz word. The question in scoping conversations is always posed, <em>“is your site responsive?”</em> And a response of <em>yes</em> from an ecom director or marketing coordinator can mean just about anything from a completely fluid layout to a separate mobile (m.dot) template.</p>
 
 <p>From a designer / developer perspective the correct rhetoric would be <em>is your site adaptive or is it responsive?</em> However, does this really cover it? Are all sites that are <em>mobile optimized</em> sitting within one of these two predefined camps?</p>
 
 <p>The short answer is <em>no</em>.</p>
 
-<p>What I have found is that most <em>mobile optimized</em> sites today (and I specify <em>mobile optimized</em> because some people still forgo mobile all together) exist on a spectrum. Much like in geometry, where a square is technically a rectangle which is also a parallelogram, but not the other way around--responsive sites are adaptive and are also mobile optimized, but not necessarily vice versa.</p>
+<p>What I have found is that most <em>mobile optimized</em> sites today (and I specify <em>mobile optimized</em> because some people still forgo mobile all together) exist on a spectrum. Much like in geometry, where a square is technically a rectangle which is also a parallelogram, but not the other way around–responsive sites are adaptive and are also mobile optimized, but not necessarily vice versa.</p>
 
 <p>In the space of mobile web development, we encounter a wide array of hybrid solutions. If we try to define the whole of the mobile web in two camps, then we leave out the gray areas that exist, we lose the ability to scope a project effectively, speak intelligently with our clients, and get the full picture to our development team.</p>
 
@@ -65,15 +65,15 @@
 
 <p>Take a look at the below CSS to see how this would look in standard media queries.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css">/* Device Detection */
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* Device Detection */</span>
 
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) { ... }
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-device-width</span><span class="p">:</span> <span class="m">768px</span><span class="p">)</span> <span class="n">and</span> <span class="p">(</span><span class="n">max-device-width</span><span class="p">:</span> <span class="m">1024px</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
 
-/* Window Size Detection */
+<span class="c">/* Window Size Detection */</span>
 
-@media screen and (min-width: 768px) and (max-width: 1024px) { ... }</code></pre></figure>
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">768px</span><span class="p">)</span> <span class="n">and</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">1024px</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span></code></pre></figure>
 
-<p>Not too much of a difference there, but in terms of behavior, <code>min/max-width</code> will work when the browser is resized, whereas <code>min/max-device-width</code> requires a mobile device or simulator to trigger. For this reason device detection is often the most bothersome to work with. It also does not account for a user using a smaller browser window on their desktop or laptop, causing an annoying horizontal scroll. For the best user experience, and adherence to true responsive design principles we are seeing window-size detection become most popular.</p>
+<p>Not too much of a difference there, but in terms of behavior, <code class="highlighter-rouge">min/max-width</code> will work when the browser is resized, whereas <code class="highlighter-rouge">min/max-device-width</code> requires a mobile device or simulator to trigger. For this reason device detection is often the most bothersome to work with. It also does not account for a user using a smaller browser window on their desktop or laptop, causing an annoying horizontal scroll. For the best user experience, and adherence to true responsive design principles we are seeing window-size detection become most popular.</p>
 
 <p>But then how do we define these terms simply?</p>
 
@@ -83,33 +83,33 @@
 
 <h4 id="mobile-optimized">Mobile Optimized</h4>
 
-<p>This encompasses any site with even the most primitive of mobile capabilities--all the way up to full on digital liquid mercury. It&#39;s just vague enough to show you have a clue where the current trends are going, but not specific enough to be presumtuous of anything ground-breaking. It shows the existence of a strategy, albeit it may be a poor one. A client solely in this category and none of the others will typically have a separate mobile site or single m.dot template.</p>
+<p>This encompasses any site with even the most primitive of mobile capabilities–all the way up to full on digital liquid mercury. It’s just vague enough to show you have a clue where the current trends are going, but not specific enough to be presumtuous of anything ground-breaking. It shows the existence of a strategy, albeit it may be a poor one. A client solely in this category and none of the others will typically have a separate mobile site or single m.dot template.</p>
 
 <h4 id="adaptive">Adaptive</h4>
 
 <p>Adaptive design takes the approach of setting the template to shift at predetermined widths or <em>breakpoints</em>. Traditionally this could either be done by serving up a new templates based upon device detection, or through media queries utilizing the same template.</p>
 
-<p>The advantage of serving separate mobile templates is that each device is served only the content optimized for that device with nothing extra loaded. Images, styles, and HTML are only that which is required--this is not the case when we move over to responsive. That being said, the media query method is gaining favor--with faster development times and being closer to <em>responsive</em> on the spectrum of mobile design.</p>
+<p>The advantage of serving separate mobile templates is that each device is served only the content optimized for that device with nothing extra loaded. Images, styles, and HTML are only that which is required–this is not the case when we move over to responsive. That being said, the media query method is gaining favor–with faster development times and being closer to <em>responsive</em> on the spectrum of mobile design.</p>
 
-<p>When done by media query, adaptive sites can either specify device-width or window-width, but the site will appear to <em>snap</em> at the specified breakpoints to the next layout. One can see that in the adaptive definition alone there is a spectrum, but it&#39;s beginning to narrow.</p>
+<p>When done by media query, adaptive sites can either specify device-width or window-width, but the site will appear to <em>snap</em> at the specified breakpoints to the next layout. One can see that in the adaptive definition alone there is a spectrum, but it’s beginning to narrow.</p>
 
-<p>If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/E2xsr/6/embedded/result/" target="_blank">this example</a>. I&#39;ve made the break points a bit more drastic to emphasize the effect but be sure to take a look at how the Site content <em>snaps</em> to the next width. I used the window-size detection method so you can simply resize your browser window rather than load in a device.</p>
+<p>If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/E2xsr/6/embedded/result/" target="_blank">this example</a>. I’ve made the break points a bit more drastic to emphasize the effect but be sure to take a look at how the Site content <em>snaps</em> to the next width. I used the window-size detection method so you can simply resize your browser window rather than load in a device.</p>
 
 <h4 id="responsive">Responsive</h4>
 
 <p>Responsive design means that the site will <em>respond</em> to any device constraints thrown at it. It involves the use of percentages for element and font size, fluid grids, and will scale the layout according to window-width <em>not</em> device-width. This is the latest craze in web design as it is the most forward thinking by ensuring consistent layout despite the myriad of new devices and screen sizes released each year.</p>
 
-<p>The criticism here is that the site is not serving up only what is required for that device--potentially resulting in a loss of performance. The advantage being, one template can fit any device or window size possible, without a loss of user experience.</p>
+<p>The criticism here is that the site is not serving up only what is required for that device–potentially resulting in a loss of performance. The advantage being, one template can fit any device or window size possible, without a loss of user experience.</p>
 
-<p>Does this mean that a responsive site is not also adaptive? No, it most certainly is adaptive, it&#39;s just more graceful than other adaptive methods. But is an adaptive site also responsive? Not necessarily.  </p>
+<p>Does this mean that a responsive site is not also adaptive? No, it most certainly is adaptive, it’s just more graceful than other adaptive methods. But is an adaptive site also responsive? Not necessarily.</p>
 
-<p>If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/9L9wk/8/embedded/result/" target="_blank">this example</a>. When you resize the window, you  can see that rather than snapping to specific points, a <em>fluid grid</em> scales on it&#39;s own, reconfiguring the layout when necessary at smaller resolutions.</p>
+<p>If you are on a desktop, take a look at <a href="http://jsfiddle.net/mrispoli24/9L9wk/8/embedded/result/" target="_blank">this example</a>. When you resize the window, you  can see that rather than snapping to specific points, a <em>fluid grid</em> scales on it’s own, reconfiguring the layout when necessary at smaller resolutions.</p>
 
-<p>Traditionally that would cover it for definitions, but I would like to add one more...</p>
+<p>Traditionally that would cover it for definitions, but I would like to add one more…</p>
 
 <h4 id="fluid-responsive">Fluid Responsive</h4>
 
-<p>This is the stuff web applications are made of, and what I consider to be the holy grail of web design. It&#39;s often not possible for more complex sites to achieve this status but it is becoming more popular with time. This is the digital liquid mercury I refer to, just pure unicorn blood. These sites will scale infinitely relying wholly on window-size detection just like their responsive parent, however they will never shift layout as is common with fluid grids. They often have to maintain a single column throughout, much like this blog, as two columns in a smart phone gets awful cumbersome.</p>
+<p>This is the stuff web applications are made of, and what I consider to be the holy grail of web design. It’s often not possible for more complex sites to achieve this status but it is becoming more popular with time. This is the digital liquid mercury I refer to, just pure unicorn blood. These sites will scale infinitely relying wholly on window-size detection just like their responsive parent, however they will never shift layout as is common with fluid grids. They often have to maintain a single column throughout, much like this blog, as two columns in a smart phone gets awful cumbersome.</p>
 
 <p>Again, if you are on a desktop, see <a href="http://jsfiddle.net/mrispoli24/L5tDz/embedded/result/" target="_blank">this example</a>. As you can see the two colums scale infinitely without any change in layout. This type of site only works for very specific applications, as e-commerce sites in particular often have many different elements that would be better suited to the responsive design principle, but not full fluidity. Though rare, it is worth noting this type of site as it requires extra care to achieve this.</p>
 
@@ -117,11 +117,11 @@
 
 <p>Here is a graphic to showcase the above definitions. If you are an account or project manager and in the business of scoping projects, the development time will typically increase as you go from left to right on the spectrum.</p>
 
-<p><img class="elastic" src="/images/adaptive-responsive-spectrum.jpg" alt="the adaptive responsive spectrum chart"></p>
+<p><img class="elastic" src="/images/adaptive-responsive-spectrum.jpg" alt="the adaptive responsive spectrum chart" /></p>
 
 <p>You can also check out <a href="http://teamtreehouse.com/library/build-a-responsive-website/introduction-to-responsive-web-design/fixed-fluid-adaptive-and-responsive-2" target="_blank">this video</a> on <a href="http://teamtreehouse.com" target="_blank">teamtreehouse.com</a> for some additional clarity.</p>
 
-<h3 id="in-conclusion">.In Conclusion</h3>
+<p>###.In Conclusion</p>
 
 <p>These definitions in themselves do not clear up the multitude of methods or combination of methods used on the web today. I have seen partially responsive sites down to a certain width where they switch to an m.dot layout; and sites that scaled all the way down to mobile using a fluid grid but when loaded into a device pull up a completely different template. Hence the need to understand this as a spectrum rather than trying to categorize every site into two distinct categories. This is especially important when asked to scope a project, whether it be a full site rebuild, or a module living inside an existing layout.</p>
 

@@ -31,67 +31,78 @@
 
 <h2 id="the-form-html">The form HTML</h2>
 
-<p>Shopify&#39;s form looks something like this in the <em>themes.liquid</em> page (if it&#39;s to be on every page).</p>
-<figure class="highlight"><pre><code class="language-HTML" data-lang="HTML">&lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; target=&quot;_blank&quot;&gt;
-  &lt;label for=&quot;Email&quot; class=&quot;newsletter__label hidden-label&quot;&gt;general.newsletter_form.newsletter_email&lt;/label&gt;
-  &lt;div class=&quot;input-group&quot;&gt;
-    &lt;input type=&quot;email&quot; value=&quot;&quot; placeholder=&quot;general.newsletter_form.newsletter_email&quot; name=&quot;EMAIL&quot; id=&quot;Email&quot; class=&quot;input-group-field newsletter__input&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot;&gt;
-    &lt;span class=&quot;input-group-btn&quot;&gt;
-      &lt;button type=&quot;submit&quot; class=&quot;btn newsletter__submit&quot; name=&quot;subscribe&quot; id=&quot;Subscribe&quot;&gt;
-        &lt;span class=&quot;newsletter__submit-text--large&quot;&gt;general.newsletter_form.submit&lt;/span&gt;
-        &lt;span class=&quot;newsletter__submit-text--small&quot;&gt;
-          &lt;span class=&quot;icon icon-arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+<p>Shopify’s form looks something like this in the <em>themes.liquid</em> page (if it’s to be on every page).</p>
+
+<pre><code class="language-HTML">&lt;form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"&gt;
+  &lt;label for="Email" class="newsletter__label hidden-label"&gt;general.newsletter_form.newsletter_email&lt;/label&gt;
+  &lt;div class="input-group"&gt;
+    &lt;input type="email" value="" placeholder="general.newsletter_form.newsletter_email" name="EMAIL" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off"&gt;
+    &lt;span class="input-group-btn"&gt;
+      &lt;button type="submit" class="btn newsletter__submit" name="subscribe" id="Subscribe"&gt;
+        &lt;span class="newsletter__submit-text--large"&gt;general.newsletter_form.submit&lt;/span&gt;
+        &lt;span class="newsletter__submit-text--small"&gt;
+          &lt;span class="icon icon-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
         &lt;/span&gt;
       &lt;/button&gt;
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-</code></pre></figure>
+</code></pre>
+
 <p>The dynamic component `` is populated with the <em>Mailchimp form action URL</em> that is set in the <em>Newsletter</em> section of the <em>Theme Editor</em>.</p>
 
 <h2 id="mailchimp-form-action-url">Mailchimp form action URL</h2>
 
 <p>The default form action from Mailchimp looks like this:</p>
-<figure class="highlight"><pre><code class="language-text" data-lang="text">//sitename.us10.list-manage.com/subscribe/post?u=[[USER_ID]]&amp;amp;id=[[LIST_ID]]
-</code></pre></figure>
-<p>It must be modified slightly to use <code>post-json</code> and add <code>&amp;c=?</code> to the end of the URL if you are working in a staging environment (key here is the domain is different from what the go live domain will be).</p>
-<figure class="highlight"><pre><code class="language-text" data-lang="text">//sitename.us10.list-manage.com/subscribe/post-json?u=[[USER_ID]]&amp;amp;id=[[LIST_ID]]&amp;c=?
-</code></pre></figure>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//sitename.us10.list-manage.com/subscribe/post?u=[[USER_ID]]&amp;amp;id=[[LIST_ID]]
+</code></pre>
+</div>
+
+<p>It must be modified slightly to use <code class="highlighter-rouge">post-json</code> and add <code class="highlighter-rouge">&amp;c=?</code> to the end of the URL if you are working in a staging environment (key here is the domain is different from what the go live domain will be).</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//sitename.us10.list-manage.com/subscribe/post-json?u=[[USER_ID]]&amp;amp;id=[[LIST_ID]]&amp;c=?
+</code></pre>
+</div>
+
 <h2 id="the-js">The JS</h2>
 
-<p>Now on to the javascript. We will be using jQuery&#39;s <code>.ajax()</code> function in a <code>GET</code> request instead of the default <code>PUT</code> on the form. We will also be using <code>jsonp</code> as the data type. <em>Note that last part is especially important if you are working in a staging environment as it is the only way to allow for a cross-domain API request to go through. Otherwise you will get a 502 error.</em></p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js">function register($form) {
-  jQuery.ajax({
-    type: &quot;GET&quot;,
-    url: $form.attr(&#39;action&#39;),
-    data: $form.serialize(),
-    cache       : false,
-    dataType    : &#39;jsonp&#39;,
-    contentType: &quot;application/json; charset=utf-8&quot;,
-    error       : function(err) { console.log(&#39;error&#39;) },
-    success     : function(data) {
-      if (data.result != &quot;success&quot;) {
-        console.log(&#39;poop&#39;);
-      } else {
-        console.log(&#39;woo hoo&#39;);
-        formSuccess();
-      }
-    }
-  });
-}
+<p>Now on to the javascript. We will be using jQuery’s <code class="highlighter-rouge">.ajax()</code> function in a <code class="highlighter-rouge">GET</code> request instead of the default <code class="highlighter-rouge">PUT</code> on the form. We will also be using <code class="highlighter-rouge">jsonp</code> as the data type. <em>Note that last part is especially important if you are working in a staging environment as it is the only way to allow for a cross-domain API request to go through. Otherwise you will get a 502 error.</em></p>
 
-// waits for form to appear rather than appending straight to the form. Also helps if you have more than one type of form that you want to use this action on.
-jQuery(document).on(&#39;submit&#39;, &#39;#mc-embedded-subscribe-form&#39;, function(event) {
-    try {
-      //define argument as the current form especially if you have more than one
-      var $form = jQuery(this);
-      // stop open of new tab
-      event.preventDefault();
-      // submit form via ajax
-      register($form);
-    } catch(error){}
-  });
-</code></pre></figure>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">register</span><span class="p">(</span><span class="nx">$form</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">jQuery</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+    <span class="na">type</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="nx">$form</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'action'</span><span class="p">),</span>
+    <span class="na">data</span><span class="p">:</span> <span class="nx">$form</span><span class="p">.</span><span class="nx">serialize</span><span class="p">(),</span>
+    <span class="na">cache</span>       <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">dataType</span>    <span class="p">:</span> <span class="s1">'jsonp'</span><span class="p">,</span>
+    <span class="na">contentType</span><span class="p">:</span> <span class="s2">"application/json; charset=utf-8"</span><span class="p">,</span>
+    <span class="na">error</span>       <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'error'</span><span class="p">)</span> <span class="p">},</span>
+    <span class="na">success</span>     <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span> <span class="o">!=</span> <span class="s2">"success"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'poop'</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'woo hoo'</span><span class="p">);</span>
+        <span class="nx">formSuccess</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// waits for form to appear rather than appending straight to the form. Also helps if you have more than one type of form that you want to use this action on.</span>
+<span class="nx">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'submit'</span><span class="p">,</span> <span class="s1">'#mc-embedded-subscribe-form'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="c1">//define argument as the current form especially if you have more than one</span>
+      <span class="kd">var</span> <span class="nx">$form</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+      <span class="c1">// stop open of new tab</span>
+      <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+      <span class="c1">// submit form via ajax</span>
+      <span class="nx">register</span><span class="p">(</span><span class="nx">$form</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){}</span>
+  <span class="p">});</span>
+</code></pre>
+</div>
+
 <p><em>Note remember to remove the console.log() stuff at go live to avoid showing it in the console. They are just there to help you test.</em></p>
 
 				</div>

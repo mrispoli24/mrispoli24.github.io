@@ -28,26 +28,29 @@
 				<h1 id="adding-email-address-regex-to-form">Adding email address regex to form</h1>
 
 <p>The following uses a regex to check for a valid email address before attempting to submit a form.</p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js">&lt;script type=&quot;text/javascript&quot;&gt;
-jQuery(function(){
-function formErrorHandler(value, e){
- try {
-     var is_email = /^(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-     if (!is_email.test(value)){
-       e.preventDefault();
-       alert(&quot;Please enter a valid email&quot;);
-    }
- }catch(error){}
-};
-jQuery(&#39;.mailchimp_signup_form&#39;).submit(function(e){
-try {
- var email = jQuery(this).find(&#39;input[name=&quot;email&quot;]&#39;).val();
- formErrorHandler(email, e);
-} catch(error){};
-});
-});
-&lt;/script&gt;
-</code></pre></figure>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
+<span class="nx">jQuery</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+<span class="kd">function</span> <span class="nx">formErrorHandler</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">e</span><span class="p">){</span>
+ <span class="k">try</span> <span class="p">{</span>
+     <span class="kd">var</span> <span class="nx">is_email</span> <span class="o">=</span> <span class="sr">/^</span><span class="se">(([^</span><span class="sr">&lt;&gt;()</span><span class="se">\[\]\\</span><span class="sr">.,;:</span><span class="se">\s</span><span class="sr">@"</span><span class="se">]</span><span class="sr">+</span><span class="se">(\.[^</span><span class="sr">&lt;&gt;()</span><span class="se">\[\]\\</span><span class="sr">.,;:</span><span class="se">\s</span><span class="sr">@"</span><span class="se">]</span><span class="sr">+</span><span class="se">)</span><span class="sr">*</span><span class="se">)</span><span class="sr">|</span><span class="se">(</span><span class="sr">".+"</span><span class="se">))</span><span class="sr">@</span><span class="se">((\[[</span><span class="sr">0-9</span><span class="se">]{1,3}\.[</span><span class="sr">0-9</span><span class="se">]{1,3}\.[</span><span class="sr">0-9</span><span class="se">]{1,3}\.[</span><span class="sr">0-9</span><span class="se">]{1,3}</span><span class="sr">]</span><span class="se">)</span><span class="sr">|</span><span class="se">(([</span><span class="sr">a-zA-Z</span><span class="se">\-</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">+</span><span class="se">\.)</span><span class="sr">+</span><span class="se">[</span><span class="sr">a-zA-Z</span><span class="se">]{2,}))</span><span class="sr">$/</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">is_email</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">value</span><span class="p">)){</span>
+       <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+       <span class="nx">alert</span><span class="p">(</span><span class="s2">"Please enter a valid email"</span><span class="p">);</span>
+    <span class="p">}</span>
+ <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){}</span>
+<span class="p">};</span>
+<span class="nx">jQuery</span><span class="p">(</span><span class="s1">'.mailchimp_signup_form'</span><span class="p">).</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+<span class="k">try</span> <span class="p">{</span>
+ <span class="kd">var</span> <span class="nx">email</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'input[name="email"]'</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+ <span class="nx">formErrorHandler</span><span class="p">(</span><span class="nx">email</span><span class="p">,</span> <span class="nx">e</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){};</span>
+<span class="p">});</span>
+<span class="p">});</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
 				</div>
 			</div>
 		</div>

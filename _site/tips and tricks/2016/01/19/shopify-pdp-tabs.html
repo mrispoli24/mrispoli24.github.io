@@ -27,67 +27,71 @@
 				<div class="post">
 				<h1 id="create-tabs-from-descriptions-in-shopify">Create tabs from descriptions in Shopify</h1>
 
-<p>The following will create tabbed content in Shopify product pages by simply delimiting each section with a new <code>&lt;h3&gt;</code> followed by the inner content required.</p>
+<p>The following will create tabbed content in Shopify product pages by simply delimiting each section with a new <code class="highlighter-rouge">&lt;h3&gt;</code> followed by the inner content required.</p>
 
 <h2 id="use">Use</h2>
 
-<p>In the Shopify WYSIWYG all content between <code>&lt;h3&gt;</code> headings will be made into tabs with the <code>&lt;h3&gt;</code> elements being the headings.</p>
+<p>In the Shopify WYSIWYG all content between <code class="highlighter-rouge">&lt;h3&gt;</code> headings will be made into tabs with the <code class="highlighter-rouge">&lt;h3&gt;</code> elements being the headings.</p>
 
-<p><img src="/images/shopify-wysiwyg-tabs-screenshot.png" alt="shopify product wysiwyg"></p>
+<p><img src="/images/shopify-wysiwyg-tabs-screenshot.png" alt="shopify product wysiwyg" /></p>
 
 <p>Which will produce this on the front-end:</p>
 
-<p><img src="/images/shopify-tabs-front-end.png" alt="shopify tabs"></p>
+<p><img src="/images/shopify-tabs-front-end.png" alt="shopify tabs" /></p>
 
 <h2 id="the-code">The Code</h2>
 
 <h3 id="jquery">jQuery</h3>
-<figure class="highlight"><pre><code class="language-js" data-lang="js">function makePdpTabs() {
-  try {
-    // create tab containers
-    jQuery(&#39;.product-single__description&#39;).prepend(&#39;&lt;div id=&quot;tab-headings&quot;&gt;&lt;/div&gt;&lt;div id=&quot;tab-content&quot;&gt;&lt;/div&gt;&#39;)
-    // loop through headings in description div and create divs to hold each tabbed content
-    jQuery(&#39;.product-single__description h3&#39;).each(function(i,e){
-      // add data attribute to h3
-      jQuery(e).attr(&#39;data_tab&#39;,&#39;content_&#39;+i)
-      //add content to tab content
-      jQuery(&#39;#tab-content&#39;).append(&#39;&lt;div id=&quot;tab_&#39;+i+&#39;&quot; class=&quot;tab&quot; data_tab=&quot;content_&#39;+i+&#39;&quot;&gt;&lt;/div&gt;&#39;);
-      jQuery(e).nextUntil(&#39;h3&#39;).andSelf().appendTo(&#39;#tab_&#39;+i);
-    });
-    //add heading to tab-headings
-    jQuery(&#39;.tab h3&#39;).appendTo(&#39;#tab-headings&#39;);
-    //set first tab to active
-    jQuery(&#39;*[data_tab=&quot;content_0&quot;]&#39;).addClass(&#39;active&#39;);
-    //set click event on  the tab
-    jQuery(&#39;#tab-headings h3&#39;).click(function(e){
-      //check if this pane is already active
-      if (jQuery(this).hasClass(&#39;active&#39;)) {
-        e.preventDefault();
-      } else {
-        //remove other active pane
-        jQuery(&#39;.active&#39;).removeClass(&#39;active&#39;);
-        //store data attribute
-        var data_target = jQuery(this).attr(&#39;data_tab&#39;);
-        jQuery(&#39;*[data_tab=&quot;&#39;+data_target+&#39;&quot;]&#39;).addClass(&#39;active&#39;);
-      }
-    });
-    // tabs hidden until dom manipulation finishes
-    jQuery(&#39;.product-single__description&#39;).addClass(&#39;tab-ready&#39;);
-  } catch(error){}
-};
-//when page is ready create tabs;
-jQuery(function(){
-  try {
-    //if product page make tabs on document ready
-    if (jQuery(&#39;meta[property=&quot;og:type&quot;]&#39;).attr(&#39;content&#39;).toLowerCase() == &#39;product&#39;) {
-      makePdpTabs();
-    }
-  } catch(error){}
-});
 
-</code></pre></figure>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">makePdpTabs</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="c1">// create tab containers</span>
+    <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'.product-single__description'</span><span class="p">).</span><span class="nx">prepend</span><span class="p">(</span><span class="s1">'&lt;div id="tab-headings"&gt;&lt;/div&gt;&lt;div id="tab-content"&gt;&lt;/div&gt;'</span><span class="p">)</span>
+    <span class="c1">// loop through headings in description div and create divs to hold each tabbed content</span>
+    <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'.product-single__description h3'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span>
+      <span class="c1">// add data attribute to h3</span>
+      <span class="nx">jQuery</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'data_tab'</span><span class="p">,</span><span class="s1">'content_'</span><span class="o">+</span><span class="nx">i</span><span class="p">)</span>
+      <span class="c1">//add content to tab content</span>
+      <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'#tab-content'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&lt;div id="tab_'</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="s1">'" class="tab" data_tab="content_'</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="s1">'"&gt;&lt;/div&gt;'</span><span class="p">);</span>
+      <span class="nx">jQuery</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">nextUntil</span><span class="p">(</span><span class="s1">'h3'</span><span class="p">).</span><span class="nx">andSelf</span><span class="p">().</span><span class="nx">appendTo</span><span class="p">(</span><span class="s1">'#tab_'</span><span class="o">+</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="c1">//add heading to tab-headings</span>
+    <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'.tab h3'</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="s1">'#tab-headings'</span><span class="p">);</span>
+    <span class="c1">//set first tab to active</span>
+    <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'*[data_tab="content_0"]'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
+    <span class="c1">//set click event on  the tab</span>
+    <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'#tab-headings h3'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+      <span class="c1">//check if this pane is already active</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">jQuery</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">'active'</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">//remove other active pane</span>
+        <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'.active'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
+        <span class="c1">//store data attribute</span>
+        <span class="kd">var</span> <span class="nx">data_target</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'data_tab'</span><span class="p">);</span>
+        <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'*[data_tab="'</span><span class="o">+</span><span class="nx">data_target</span><span class="o">+</span><span class="s1">'"]'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="c1">// tabs hidden until dom manipulation finishes</span>
+    <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'.product-single__description'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'tab-ready'</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){}</span>
+<span class="p">};</span>
+<span class="c1">//when page is ready create tabs;</span>
+<span class="nx">jQuery</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="c1">//if product page make tabs on document ready</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">jQuery</span><span class="p">(</span><span class="s1">'meta[property="og:type"]'</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'content'</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'product'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">makePdpTabs</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="p">){}</span>
+<span class="p">});</span>
+
+</code></pre>
+</div>
+
 <h3 id="css">CSS</h3>
-<figure class="highlight"><pre><code class="language-CSS" data-lang="CSS">/* hide description until tabs are ready */
+
+<pre><code class="language-CSS">/* hide description until tabs are ready */
 .product-single__description {
  opacity: 0;
  visibilty: hidden;
@@ -139,7 +143,8 @@ jQuery(function(){
   visibility: visible;
 }
 
-</code></pre></figure>
+</code></pre>
+
 				</div>
 			</div>
 		</div>
