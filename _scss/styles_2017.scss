@@ -1,0 +1,126 @@
+// variables
+$color-black: #101010;
+$color-white: #ffffff;
+$color-grey: #CECECE;
+$color-green: #40AA79;
+$color-light-green: #9FE0C2;
+$font-heading: 'Oswald', sans-serif;
+$font-text: 'Open Sans', sans-serif;
+// end variables
+
+html,
+body {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+// frosted glass style
+.frosted {
+  position: relative;
+  transform: translateX(0) translateY(0) translateZ(0);
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0) translateY(0) translateZ(0);
+    z-index: -1;
+    background-image: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_color.jpg');
+    background-position: 100% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(15px) opacity(0.7) brightness(0.5);
+  }
+}
+// end frosted glass style
+
+// sidebar nav
+#fixed-sidebar {
+  position: fixed;
+  background-color: $color-black;
+  min-height: 100vh;
+  z-index: 10;
+  #site-name {
+    display: block;
+    font-size: 3.0rem;
+    line-height: 4.5rem;
+    font-family: $font-heading;
+    color: $color-white;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  nav {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        a {
+          font-size: 1.75rem;
+          line-height: 3rem;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+// end sidebar nav
+
+// section global styles
+section {
+  min-height: 100vh;
+  .section-heading {
+    font-family: $font-heading;
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
+// end section global styles
+
+// home section
+#home {
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+  background-image: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_color.jpg');
+  background-size: cover;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  #hero-splash {
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    padding: 2rem;
+    background-color: $color-green;
+    overflow: visible;
+    #profile-text {
+      #hero-text,
+      #sub-text {
+        display: block;
+      }
+      #hero-text {
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        color: $color-white;
+      }
+      #sub-text {
+        font-family: $font-text;
+        margin-top: 1.5rem;
+        font-size: 1.25rem;
+        color: $color-grey;
+      }
+    }
+  }
+}
+// end home section
