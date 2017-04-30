@@ -1,8 +1,9 @@
 // variables
-$color-black: #101010;
+$color-black: #000c00;
+$color-dark-grey: #252525;
 $color-white: #ffffff;
 $color-grey: #CECECE;
-$color-green: #40AA79;
+$color-green: #2e912e;
 $color-light-green: #9FE0C2;
 $font-heading: 'Oswald', sans-serif;
 $font-text: 'Open Sans', sans-serif;
@@ -79,10 +80,26 @@ body {
 // section global styles
 section {
   min-height: 100vh;
-  .section-heading {
-    font-family: $font-heading;
-    margin-top: 0;
-    padding-top: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
+  .section-content {
+    width: 100%;
+    max-width: 35em;
+    margin: 0 auto;
+    .section-heading {
+      font-family: $font-heading;
+      margin: 0;
+      padding: 0;
+      line-height: 5rem;
+    }
+    .section-text {
+      p {
+        margin: 1.75rem 0;
+        font-family: $font-text;
+        font-size: 1rem;
+        line-height: 1.75rem;
+      }
+    }
   }
 }
 // end section global styles
@@ -124,3 +141,21 @@ section {
   }
 }
 // end home section
+
+// about section
+#about {
+  background-color: $color-green;
+  #profile-photo {
+    display: block;
+    margin: 4rem auto;
+    width: 200px;
+    height: auto;
+    border-radius: 100px;
+    text-align: center;
+  }
+  .section-text,
+  .section-heading {
+    color: $color-white;
+  }
+}
+// end about section
