@@ -93,6 +93,7 @@ section {
       line-height: 5rem;
     }
     .section-text {
+      padding-bottom: 15px;
       p {
         margin: 1.75rem 0;
         font-family: $font-text;
@@ -159,3 +160,13 @@ section {
   }
 }
 // end about section
+
+
+// resume section
+#resume {
+  .job {
+    padding: 1rem 0;
+  }
+}
+
+// end resume section
