@@ -1,0 +1,302 @@
+// variables
+$color-black: #000c00;
+$color-dark-grey: #252525;
+$color-white: #ffffff;
+$color-grey: #CECECE;
+$color-green: #2e912e;
+$color-light-green: #9FE0C2;
+$font-heading: 'Oswald', sans-serif;
+$font-text: 'Open Sans', sans-serif;
+// end variables
+
+html,
+body {
+  font-family: $font-text;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+// frosted glass style
+.frosted {
+  position: relative;
+  transform: translateX(0) translateY(0) translateZ(0);
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0) translateY(0) translateZ(0);
+    z-index: -1;
+    background-image: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_color.jpg');
+    background-position: 100% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(15px) opacity(0.7) brightness(0.5);
+  }
+}
+// end frosted glass style
+
+// sidebar nav
+#fixed-sidebar {
+  position: fixed;
+  background-color: $color-black;
+  min-height: 100vh;
+  z-index: 10;
+
+  #nav-toggle {
+    display: none;
+    position: absolute;
+    top: 1.6rem;
+    right: 15px;
+    z-index: 9;
+    cursor: pointer;
+    .bar {
+      display: block;
+      width: 30px;
+      height: 2px;
+      margin-bottom: 8px;
+      background-color: $color-white;
+      transition: all 100ms linear;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.open {
+    #nav-toggle {
+      .bar-1 {
+        visibility: hidden;
+        opacity: 0;
+      }
+      .bar-2 {
+        transform: translateY(0) rotate(45deg);
+      }
+      .bar-3 {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
+  #site-name {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+    font-family: $font-heading;
+    color: $color-white;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  nav {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        a {
+          font-size: 1.75rem;
+          line-height: 3rem;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+// end sidebar nav
+
+// section global styles
+section {
+  padding: 15px 0;
+  min-height: 100vh;
+  margin-left: -15px;
+  margin-right: -15px;
+  .section-content {
+    width: 100%;
+    max-width: 35em;
+    margin: 0 auto;
+    .section-heading {
+      font-family: $font-heading;
+      margin: 0;
+      padding: 0;
+      line-height: 5rem;
+    }
+    .section-text {
+      p {
+        margin: 1.75rem 0;
+        font-family: $font-text;
+        font-size: 1rem;
+        line-height: 1.75rem;
+      }
+    }
+  }
+}
+// end section global styles
+
+// home section
+#home {
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+  background-image: url('/images/hero_slideshow/gi_kiss_ww2_nyc_highline_color.jpg');
+  background-size: cover;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  #hero-splash {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4rem;
+    background-color: $color-green;
+    overflow: visible;
+    #profile-text {
+      #hero-text,
+      #sub-text {
+        display: block;
+      }
+      #hero-text {
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        color: $color-white;
+      }
+      #sub-text {
+        font-family: $font-text;
+        margin-top: 1.5rem;
+        font-size: 1.25rem;
+        color: $color-grey;
+      }
+    }
+  }
+}
+// end home section
+
+// about section
+#about {
+  //background-color: $color-green;
+  #profile-photo {
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+  }
+  // .section-text,
+  // .section-heading {
+  //   color: $color-white;
+  // }
+}
+// end about section
+
+
+// resume section
+#resume {
+  .job {
+    padding: 1rem 0;
+  }
+  .extended-resume-text {
+    margin: 0;
+  }
+  .extended-resume {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+// end resume section
+
+// contact
+
+#contact {
+  #contact-form {
+    margin-top: 2rem;
+    .form-group {
+    	position: relative;
+    	margin-bottom: 25px;
+    }
+
+    .error-msg {
+    	display: none;
+    	position: absolute;
+    	bottom: -20px;
+    	left: 5px;
+    	font-size: 12px;
+    	color: #a94442;
+    }
+
+    .btn-success {
+      display: block;
+      width: 100%;
+      font-size: 1.25rem;
+      background-color: $color-green;
+      border-color: $color-green;
+    }
+  }
+
+  #success-message {
+    display: none;
+  }
+}
+
+// end contact
+
+// post
+
+.post {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  #fixed-sidebar {
+    min-height: auto;
+    #nav-toggle {
+      display: block;
+    }
+    nav {
+      left: 0;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      li {
+        text-align: center;
+      }
+    }
+    &.open {
+      min-height: 100vh;
+      nav {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  section {
+    padding-top: 75px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  #home {
+    #hero-splash {
+      top: 0;
+      padding: 6rem 2rem 2rem;
+    }
+  }
+
+}

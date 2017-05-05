@@ -1,2 +1,5 @@
 name: Michael Rispoli
 highlighter: rouge
+sass:
+  sass_dir: _scss
+  style: compressed

@@ -1,19 +1,25 @@
 <!doctype html>
 <html>
-	<head>
-		{% include head.html %}
-	</head>
-	<body>
-		<div id="post-wrapper" class="container-fluid">
-		{% include header_post.html %}
-		<hr>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="post">
-				{{ content }}
-				</div>
-			</div>
-		</div>
-		</div>
-	</body>
+<head>
+  {% include head_2017.html %}
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      {% include post_sidebar_nav.html %}
+      <div id="main-content" class="col-xs-12 col-sm-12 col-md-9 col-md-offset-3">
+				<section class="post">
+          <div class="section-content">
+        		{{ content }}
+					</div>
+				</section>
+      </div>
+    </div>
+  </div>
+  <!-- scripts here starting with jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/js/behave_2017.js"></script>
+  <!-- end scripts -->
+</body>
 </html>
