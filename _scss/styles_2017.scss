@@ -145,7 +145,7 @@ section {
 
 // about section
 #about {
-  background-color: $color-green;
+  //background-color: $color-green;
   #profile-photo {
     display: block;
     margin: 4rem auto;
@@ -154,10 +154,10 @@ section {
     border-radius: 100px;
     text-align: center;
   }
-  .section-text,
-  .section-heading {
-    color: $color-white;
-  }
+  // .section-text,
+  // .section-heading {
+  //   color: $color-white;
+  // }
 }
 // end about section
 
@@ -167,6 +167,39 @@ section {
   .job {
     padding: 1rem 0;
   }
+  .extended-resume-text {
+    margin: 0;
+  }
+  .extended-resume {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
 }
 
 // end resume section
+
+// contact
+
+#contact {
+  .form-group {
+  	position: relative;
+  	margin-bottom: 25px;
+  }
+
+  #success-message {
+  	display: none;
+  }
+
+  .error-msg {
+  	display: none;
+  	position: absolute;
+  	bottom: -20px;
+  	left: 5px;
+  	font-size: 12px;
+  	color: #a94442;
+  }
+}
+
+// end contact
