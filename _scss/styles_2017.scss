@@ -46,6 +46,40 @@ body {
   background-color: $color-black;
   min-height: 100vh;
   z-index: 10;
+
+  #nav-toggle {
+    display: none;
+    position: absolute;
+    top: 1.6rem;
+    right: 15px;
+    z-index: 9;
+    cursor: pointer;
+    .bar {
+      display: block;
+      width: 30px;
+      height: 2px;
+      margin-bottom: 8px;
+      background-color: $color-white;
+      transition: all 100ms linear;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.open {
+    #nav-toggle {
+      .bar-1 {
+        visibility: hidden;
+        opacity: 0;
+      }
+      .bar-2 {
+        transform: translateY(0) rotate(45deg);
+      }
+      .bar-3 {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
   #site-name {
     display: block;
     font-size: 2.5rem;
@@ -215,3 +249,54 @@ section {
 }
 
 // end contact
+
+// post
+
+.post {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  #fixed-sidebar {
+    min-height: auto;
+    #nav-toggle {
+      display: block;
+    }
+    nav {
+      left: 0;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      li {
+        text-align: center;
+      }
+    }
+    &.open {
+      min-height: 100vh;
+      nav {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  section {
+    padding-top: 75px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  #home {
+    #hero-splash {
+      top: 0;
+      padding: 6rem 2rem 2rem;
+    }
+  }
+
+}

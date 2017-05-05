@@ -1,24 +1,15 @@
 
 // check document ready first
 $(document).ready(function(){
-
-  //scrolling animation
-  $('a[href^="#"]').click(function(event) {
-    var target = $($(this).attr('href'));
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: target.offset().top
-        }, 1000);
+  // nav toggle
+  function toggleNav() {
+    if ($('.js-fixed-sidebar')[0].classList.contains('open')) {
+      $('.js-fixed-sidebar')[0].classList.remove('open');
+    } else {
+      $('.js-fixed-sidebar')[0].classList.add('open');
     }
-  });
-  // end scrolling animation
 
-  // extended resume toggle
-  $('.js-extended-resume-toggle').click(function(event) {
-    event.preventDefault();
-    $('.js-extended-resume').toggle('active');
-  });
+  }
 
   //email address validator
   function isValidEmail(email, e){
@@ -37,6 +28,37 @@ $(document).ready(function(){
   		$('#success-message').show();
   	});
   };
+
+  //scrolling animation
+  $('a[href^="#"]').click(function(e) {
+    var target = $($(this).attr('href'));
+    if( target.length ) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+  });
+  // end scrolling animation
+
+  // mobile-nav-toggle
+
+  $('.js-nav-toggle').click(function(e) {
+    e.preventDefault();
+    toggleNav();
+  });
+
+  $('.js-nav').click(function(e) {
+    $('.js-fixed-sidebar')[0].classList.remove('open');
+  });
+
+  // end mobile-nav-toggle
+
+  // extended resume toggle
+  $('.js-extended-resume-toggle').click(function(e) {
+    e.preventDefault();
+    $('.js-extended-resume').toggle('active');
+  });
 
   //contact form event handler
   $('#contact-form').on('submit',function(e){
