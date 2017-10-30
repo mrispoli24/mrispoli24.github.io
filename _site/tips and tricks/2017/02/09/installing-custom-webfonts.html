@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <title>Installing Custom Web Fonts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/syntax.css">
+<link rel="stylesheet" href="/css/styles_2017.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Oswald:500" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div id="fixed-sidebar" class="js-fixed-sidebar col-xs-12 col-sm-12 col-md-3">
+  <!-- begin navigation toggle -->
+  <a id="nav-toggle" class="js-nav-toggle" href="/">
+    <i class="bar bar-1"></i>
+    <i class="bar bar-2"></i>
+    <i class="bar bar-3"></i>
+  </a>
+  <!-- end navigation toggle -->
+  <a id="site-name" href="/#home">Michael Rispoli</a>
+  <nav class="js-nav">
+    <ul>
+      <li><a href="/#about">About Me</a></li>
+      <li><a href="/#resume">Resume</a></li>
+      <li><a href="/#portfolio">Portfolio</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/#journal">Journal</a></li>
+    </ul>
+  </nav>
+</div>
+
+      <div id="main-content" class="col-xs-12 col-sm-12 col-md-9 col-md-offset-3">
+				<section class="post">
+          <div class="section-content">
+        		<h1 id="installing-custom-web-fonts">Installing Custom Web Fonts</h1>
+
+<p>The following outlines adding custom font files, importing them, as well as a quick reference to the different weight names and what the mean from “Thin” to “Black.”</p>
+
+<h2 id="file-type-and-placement">File Type and Placement</h2>
+<p>I like to place my font files in a separate <code class="highlighter-rouge">/fonts</code> directory so you know where to find them and they are essentially their own entity.</p>
+
+<p>If you are using a lot of fonts you can go a step further and place each family and weight into it’s own directory as well since you will have multiple files types for cross-browser compatibility.</p>
+
+<p>The most common and well supported font formats that you should acquire for a custom font are <code class="highlighter-rouge">woff</code> and  <code class="highlighter-rouge">woff2</code>. That being said if you get others for greater support the next section show the order you should place them in for best support.</p>
+
+<h2 id="font-face-rules">@font-face rules</h2>
+
+<p>To import web fonts with the best possible support across legacy systems reference the following <code class="highlighter-rouge">@font-face</code> rule.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="k">@font-face</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'MyWebFont'</span><span class="p">;</span>
+  <span class="nl">src</span><span class="p">:</span> <span class="sx">url('/fonts/webfont.eot')</span><span class="p">;</span> <span class="c">/* IE9 Compat Modes */</span>
+  <span class="nl">src</span><span class="p">:</span> <span class="sx">url('/fonts/webfont.eot?#iefix')</span> <span class="n">format</span><span class="p">(</span><span class="s2">'embedded-opentype'</span><span class="p">),</span> <span class="c">/* IE6-IE8 */</span>
+       <span class="sx">url('/fonts/webfont.woff2')</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">),</span> <span class="c">/* Super Modern Browsers */</span>
+       <span class="sx">url('/fonts/webfont.woff')</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff'</span><span class="p">),</span> <span class="c">/* Pretty Modern Browsers */</span>
+       <span class="sx">url('/fonts/webfont.ttf')</span>  <span class="n">format</span><span class="p">(</span><span class="s2">'truetype'</span><span class="p">),</span> <span class="c">/* Safari, Android, iOS */</span>
+       <span class="sx">url('/fonts/webfont.svg#svgFontName')</span> <span class="n">format</span><span class="p">(</span><span class="s2">'svg'</span><span class="p">);</span> <span class="c">/* Legacy iOS */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Basic modern browser support can be achieved with he following:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="k">@font-face</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'MyWebFont'</span><span class="p">;</span>
+  <span class="nl">src</span><span class="p">:</span>  <span class="sx">url('/fonts/myfont.woff2')</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">),</span>
+        <span class="sx">url('/fonts/myfont.woff')</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Modern browsers from IE9+ will handle a <code class="highlighter-rouge">woff</code> font file.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Taken from this wonderful CSS Tricks article: [Using @font-face</td>
+      <td>CSS-Tricks](https://css-tricks.com/snippets/css/using-font-face/)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="font-weights">Font Weights</h2>
+<p>The different font weight names can be rather confusing (ie. what the hell is “book”) so here is a list of font weights from the lightest to the heaviest.</p>
+
+<ol>
+  <li>Thin</li>
+  <li>Extra Light</li>
+  <li>Light</li>
+  <li>Book</li>
+  <li>Regular</li>
+  <li>Medium</li>
+  <li>Bold</li>
+  <li>Black</li>
+</ol>
+
+					</div>
+				</section>
+      </div>
+    </div>
+  </div>
+  <!-- scripts here starting with jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/js/behave_2017.js"></script>
+  <!-- end scripts -->
+</body>
+</html>
